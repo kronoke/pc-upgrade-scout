@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Straightforward PC upgrade recommendations, compatibility notes, and curated gaming hardware picks." />
+  <meta name="description" content="A beginner-friendly 1440p gaming PC parts list with compatibility notes and direct links to each component." />
   <meta name="theme-color" content="#08101f" />
-  <title>PC Upgrade Scout | Smarter Gaming PC Upgrades</title>
+  <title>Beginner 1440p Gaming PC Build | PC Upgrade Scout</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -24,9 +24,9 @@
       </a>
       <button class="menu-button" id="menuButton" aria-expanded="false" aria-controls="mainNav">Menu</button>
       <nav class="main-nav" id="mainNav" aria-label="Primary navigation">
-        <a href="#recommendations">Top picks</a>
-        <a href="#categories">Categories</a>
-        <a href="#guides">Guides</a>
+        <a href="#recommendations">Build parts</a>
+        <a href="#categories">Components</a>
+        <a href="#compatibility">Compatibility</a>
         <a href="affiliate-disclosure.html">Disclosure</a>
       </nav>
     </div>
@@ -38,53 +38,39 @@
       <div class="hero-glow hero-glow-two"></div>
       <div class="container hero-grid">
         <div class="hero-copy">
-          <div class="eyebrow">No-hype PC upgrade advice</div>
-          <h1>Upgrade your gaming PC without wasting money.</h1>
-          <p class="hero-lede">Compare practical picks, check compatibility, and see who each upgrade is actually for.</p>
+          <div class="eyebrow">Complete beginner parts list</div>
+          <h1>Beginner 1440p Gaming PC Build</h1>
+          <p class="hero-lede">Seven compatible core components built around a Ryzen 5 9600 and PNY GeForce RTX 5070. No separate CPU cooler is required, Wi-Fi is included, and every part can be purchased individually.</p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#recommendations">Browse top picks</a>
-            <a class="button button-secondary" href="#quick-check">Check your setup</a>
+            <a class="button button-primary" href="#recommendations">See all seven parts</a>
+            <a class="button button-secondary" href="#compatibility">Why they work together</a>
           </div>
-          <p class="affiliate-note">This site may earn a commission from qualifying purchases at no extra cost to you.</p>
+          <p class="affiliate-note">As an Amazon Associate I earn from qualifying purchases. There is no additional cost to you.</p>
         </div>
 
-        <aside class="hero-panel" id="quick-check" aria-labelledby="quickCheckTitle">
+        <aside class="hero-panel" aria-labelledby="buildSummaryTitle">
           <div class="panel-topline">
             <span class="status-dot"></span>
-            <span>Quick compatibility check</span>
+            <span>Compatibility-checked foundation</span>
           </div>
-          <h2 id="quickCheckTitle">What are you upgrading?</h2>
-          <form id="upgradeForm">
-            <label for="upgradeType">Component</label>
-            <select id="upgradeType" name="upgradeType">
-              <option value="gpu">Graphics card</option>
-              <option value="ssd">SSD / storage</option>
-              <option value="ram">Memory / RAM</option>
-              <option value="monitor">Gaming monitor</option>
-              <option value="psu">Power supply</option>
-            </select>
-
-            <label for="budget">Maximum budget</label>
-            <select id="budget" name="budget">
-              <option value="200">Under $200</option>
-              <option value="400">Under $400</option>
-              <option value="700">Under $700</option>
-              <option value="1000">Under $1,000</option>
-              <option value="9999">No fixed budget</option>
-            </select>
-
-            <button class="button button-primary button-full" type="submit">Show matching picks</button>
-          </form>
-          <p class="form-result" id="formResult" role="status" aria-live="polite"></p>
+          <h2 id="buildSummaryTitle">Build summary</h2>
+          <ul class="check-list">
+            <li>Target: high-quality 1440p gaming</li>
+            <li>Platform: AMD AM5 with DDR5 memory</li>
+            <li>Memory: 32GB dual-channel kit</li>
+            <li>Storage: 2TB PCIe 4.0 NVMe SSD</li>
+            <li>Networking: motherboard Wi-Fi included</li>
+            <li>Cooling: CPU cooler included in the box</li>
+          </ul>
         </aside>
       </div>
     </section>
 
-    <section class="trust-strip" aria-label="What makes our recommendations different">
+    <section class="trust-strip" aria-label="Build advantages">
       <div class="container trust-grid">
-        <div><strong>Compatibility first</strong><span>Fit, power, and platform notes</span></div>
-        <div><strong>Real use cases</strong><span>Recommendations by player type</span></div>
-        <div><strong>No fake urgency</strong><span>Clear value and tradeoffs</span></div>
+        <div><strong>One complete build</strong><span>No random incompatible parts</span></div>
+        <div><strong>Beginner focused</strong><span>Fewer add-ons to choose</span></div>
+        <div><strong>Current prices</strong><span>Checked directly at Amazon</span></div>
       </div>
     </section>
 
@@ -92,29 +78,35 @@
       <div class="container">
         <div class="section-heading">
           <div>
-            <div class="eyebrow">Shop by component</div>
-            <h2>Start with the part you need.</h2>
+            <div class="eyebrow">Jump to a component</div>
+            <h2>Explore the build one part at a time.</h2>
           </div>
-          <p>Use these categories to narrow the recommendations below.</p>
+          <p>Select a category to isolate that component below.</p>
         </div>
         <div class="category-grid" id="categoryGrid">
           <button class="category-card active" data-category="all" type="button">
-            <span class="category-icon">✦</span><span>All picks</span><small>Curated shortlist</small>
+            <span class="category-icon">✦</span><span>Complete build</span><small>All seven parts</small>
           </button>
-          <button class="category-card" data-category="gpu" type="button">
-            <span class="category-icon">GPU</span><span>Graphics cards</span><small>FPS and resolution</small>
+          <button class="category-card" data-category="cpu" type="button">
+            <span class="category-icon">CPU</span><span>Processor</span><small>Ryzen 5 9600</small>
           </button>
-          <button class="category-card" data-category="ssd" type="button">
-            <span class="category-icon">SSD</span><span>Storage</span><small>Load times and space</small>
+          <button class="category-card" data-category="motherboard" type="button">
+            <span class="category-icon">MB</span><span>Motherboard</span><small>AM5 and Wi-Fi</small>
           </button>
           <button class="category-card" data-category="ram" type="button">
-            <span class="category-icon">RAM</span><span>Memory</span><small>Capacity and stability</small>
+            <span class="category-icon">RAM</span><span>Memory</span><small>32GB DDR5</small>
           </button>
-          <button class="category-card" data-category="monitor" type="button">
-            <span class="category-icon">Hz</span><span>Monitors</span><small>Clarity and refresh rate</small>
+          <button class="category-card" data-category="ssd" type="button">
+            <span class="category-icon">SSD</span><span>Storage</span><small>2TB NVMe</small>
+          </button>
+          <button class="category-card" data-category="gpu" type="button">
+            <span class="category-icon">GPU</span><span>Graphics card</span><small>RTX 5070</small>
           </button>
           <button class="category-card" data-category="psu" type="button">
-            <span class="category-icon">W</span><span>Power supplies</span><small>Safe upgrade headroom</small>
+            <span class="category-icon">W</span><span>Power supply</span><small>750W ATX 3.1</small>
+          </button>
+          <button class="category-card" data-category="case" type="button">
+            <span class="category-icon">ATX</span><span>Case</span><small>Airflow focused</small>
           </button>
         </div>
       </div>
@@ -124,46 +116,47 @@
       <div class="container">
         <div class="section-heading recommendation-heading">
           <div>
-            <div class="eyebrow">Editor shortlist</div>
-            <h2>Recommended upgrades</h2>
+            <div class="eyebrow">Beginner 1440p build</div>
+            <h2>The complete parts list</h2>
           </div>
           <div class="filter-wrap">
-            <label class="sr-only" for="productSearch">Search products</label>
-            <input id="productSearch" type="search" placeholder="Search picks..." autocomplete="off" />
-            <label class="sr-only" for="sortProducts">Sort products</label>
+            <label class="sr-only" for="productSearch">Search build components</label>
+            <input id="productSearch" type="search" placeholder="Search components..." autocomplete="off" />
+            <label class="sr-only" for="sortProducts">Sort build components</label>
             <select id="sortProducts">
-              <option value="featured">Featured</option>
-              <option value="price-low">Price: low to high</option>
-              <option value="price-high">Price: high to low</option>
+              <option value="build-order">Recommended build order</option>
+              <option value="component">Component A–Z</option>
             </select>
           </div>
         </div>
 
-        <div class="results-line"><span id="resultsCount">0 recommendations</span><button id="clearFilters" class="text-button" type="button">Clear filters</button></div>
+        <div class="results-line"><span id="resultsCount">0 build components</span><button id="clearFilters" class="text-button" type="button">Show complete build</button></div>
         <div class="product-grid" id="productGrid"></div>
         <div class="empty-state" id="emptyState" hidden>
-          <h3>No matching products yet</h3>
-          <p>Try another category, budget, or search term.</p>
+          <h3>No matching component</h3>
+          <p>Try another category or search term.</p>
         </div>
       </div>
     </section>
 
-    <section class="section comparison-section">
+    <section class="section comparison-section" id="compatibility">
       <div class="container comparison-grid">
         <div>
-          <div class="eyebrow">Example compatibility verdict</div>
-          <h2>Will an 850W power supply handle a modern GPU?</h2>
-          <p>Usually yes for many high-performance single-GPU systems, but the exact answer depends on the graphics card model, CPU, connector requirements, and the quality and age of the power supply.</p>
-          <a class="inline-link" href="#guides">Read the full compatibility guide <span aria-hidden="true">→</span></a>
+          <div class="eyebrow">Why this combination works</div>
+          <h2>A modern AM5 platform with sensible supporting parts.</h2>
+          <p>The Ryzen 5 9600 uses the AM5 socket supported by the MSI B850 motherboard. The board uses DDR5 memory and supports AMD EXPO, matching the selected Kingston kit. The SSD uses a standard M.2 NVMe connection, while the 750W ATX 3.1 power supply is paired with the RTX 5070.</p>
+          <p>Exact memory-profile stability, firmware versions, retailer substitutions, and physical revisions can vary. Confirm the model shown on Amazon before ordering.</p>
         </div>
         <div class="verdict-card">
-          <div class="verdict-label">Example verdict</div>
-          <div class="verdict-score"><span>Good fit</span><strong>8.5/10</strong></div>
+          <div class="verdict-label">Build verdict</div>
+          <div class="verdict-score"><span>Beginner friendly</span><strong>Good fit</strong></div>
           <ul class="check-list">
-            <li>Enough wattage for many builds</li>
-            <li>Confirm the required GPU connectors</li>
-            <li>Prefer a reputable modern PSU</li>
-            <li>Leave room for transient power spikes</li>
+            <li>CPU and motherboard share the AM5 socket</li>
+            <li>Motherboard and memory both use DDR5</li>
+            <li>CPU cooler is included</li>
+            <li>Wi-Fi is built into the motherboard</li>
+            <li>Case supports the selected ATX motherboard</li>
+            <li>PSU is fully modular for easier cable management</li>
           </ul>
         </div>
       </div>
@@ -173,47 +166,28 @@
       <div class="container">
         <div class="section-heading">
           <div>
-            <div class="eyebrow">Buyer education</div>
-            <h2>Helpful upgrade guides</h2>
+            <div class="eyebrow">Before you order</div>
+            <h2>Three checks every new builder should make.</h2>
           </div>
-          <p>These article cards are ready to become your first SEO content pages.</p>
+          <p>These quick checks reduce the chance of selecting the wrong variation on a retailer page.</p>
         </div>
         <div class="guide-grid">
           <article class="guide-card guide-card-featured">
-            <div class="guide-tag">Start here</div>
-            <h3>How to know which PC part to upgrade first</h3>
-            <p>A practical checklist for separating CPU, GPU, memory, storage, and monitor bottlenecks.</p>
-            <a href="#">Draft guide <span aria-hidden="true">→</span></a>
+            <div class="guide-tag">Product variation</div>
+            <h3>Match the exact model name</h3>
+            <p>Amazon listings may combine multiple capacities, colors, heatsink options, or component revisions. Confirm the selected option matches the name on this page.</p>
           </article>
           <article class="guide-card">
-            <div class="guide-tag">Compatibility</div>
-            <h3>How to check if a graphics card fits your PC</h3>
-            <p>Case clearance, motherboard slots, power connectors, and PSU capacity explained.</p>
-            <a href="#">Draft guide <span aria-hidden="true">→</span></a>
+            <div class="guide-tag">Memory setup</div>
+            <h3>Install the RAM as a matched pair</h3>
+            <p>Use the motherboard-recommended two-stick slots, then enable the appropriate EXPO profile after the system is stable.</p>
           </article>
           <article class="guide-card">
-            <div class="guide-tag">Storage</div>
-            <h3>Is a Gen 4 NVMe SSD worth it for gaming?</h3>
-            <p>Where faster storage matters, where it does not, and what specs to compare.</p>
-            <a href="#">Draft guide <span aria-hidden="true">→</span></a>
+            <div class="guide-tag">First boot</div>
+            <h3>Connect the monitor to the graphics card</h3>
+            <p>After assembly, connect DisplayPort or HDMI to the RTX 5070 rather than the motherboard video outputs.</p>
           </article>
         </div>
-      </div>
-    </section>
-
-    <section class="section newsletter-section">
-      <div class="container newsletter-card">
-        <div>
-          <div class="eyebrow">Build the audience</div>
-          <h2>Add deal alerts later.</h2>
-          <p>This placeholder can connect to ConvertKit, Beehiiv, Mailchimp, or another email service after launch.</p>
-        </div>
-        <form class="newsletter-form" onsubmit="event.preventDefault(); document.getElementById('newsletterStatus').textContent='Email collection is not connected yet.';">
-          <label class="sr-only" for="email">Email address</label>
-          <input id="email" type="email" placeholder="you@example.com" required />
-          <button class="button button-primary" type="submit">Join alerts</button>
-          <span id="newsletterStatus" role="status" aria-live="polite"></span>
-        </form>
       </div>
     </section>
   </main>
@@ -222,13 +196,13 @@
     <div class="container footer-grid">
       <div>
         <a class="brand footer-brand" href="index.html"><span class="brand-mark">US</span><span>PC Upgrade Scout</span></a>
-        <p>Practical PC upgrade recommendations with clear compatibility notes and honest tradeoffs.</p>
+        <p>Beginner-friendly PC parts lists with clear compatibility explanations and honest purchasing notes.</p>
       </div>
       <div>
         <h2>Explore</h2>
-        <a href="#recommendations">Top picks</a>
-        <a href="#categories">Categories</a>
-        <a href="#guides">Guides</a>
+        <a href="#recommendations">Build parts</a>
+        <a href="#categories">Components</a>
+        <a href="#compatibility">Compatibility</a>
       </div>
       <div>
         <h2>Legal</h2>
