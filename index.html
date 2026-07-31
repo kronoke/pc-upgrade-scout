@@ -3,312 +3,32 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="One complete starter 1440p gaming PC build for first-time builders, with component stats, compatibility explanations, and links to every part." />
-  <meta name="theme-color" content="#08101f" />
-  <title>Starter 1440p Gaming PC Build | PC Upgrade Scout</title>
+  <meta name="description" content="PC Upgrade Scout helps amateur gamers build compatible PCs, discover competitive gaming gear, and understand what every component does." />
+  <meta name="theme-color" content="#17152a" />
+  <title>PC Upgrade Scout | Build, Gear Up, Learn</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="build.css" />
-  <script defer src="app.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Zen+Maru+Gothic:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="hub.css" />
+  <script defer src="hub.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-
   <header class="site-header">
     <div class="container nav-wrap">
-      <a class="brand" href="index.html" aria-label="PC Upgrade Scout home">
-        <span class="brand-mark" aria-hidden="true">US</span>
-        <span>PC Upgrade Scout</span>
-      </a>
+      <a class="brand" href="index.html" aria-label="PC Upgrade Scout home"><img src="pc-upgrade-scout-logo.svg" alt="PC Upgrade Scout" /></a>
       <button class="menu-button" id="menuButton" aria-expanded="false" aria-controls="mainNav">Menu</button>
-      <nav class="main-nav" id="mainNav" aria-label="Primary navigation">
-        <a href="#build-stats">Build stats</a>
-        <a href="#recommendations">All parts</a>
-        <a href="#pairings">Why it works</a>
-        <a href="affiliate-disclosure.html">Disclosure</a>
-      </nav>
+      <nav class="main-nav" id="mainNav" aria-label="Primary navigation"><a href="#paths">Start here</a><a href="starter-1440p-build.html">PC builds</a><a href="#gear">Pro-used gear</a><a href="#learn">Learn</a><a href="affiliate-disclosure.html">Disclosure</a></nav>
     </div>
   </header>
-
   <main id="main">
-    <section class="hero">
-      <div class="hero-glow hero-glow-one"></div>
-      <div class="hero-glow hero-glow-two"></div>
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <div class="eyebrow">First-time builder starter PC</div>
-          <h1>Starter 1440p Gaming PC Build</h1>
-          <p class="hero-lede"><strong>This is one complete PC build—not a collection of random parts.</strong> Every core component was selected to work with the others, giving a new builder a clear path from an empty case to a strong 1440p gaming computer.</p>
-          <div class="starter-callout"><strong>What “starter” means:</strong> beginner-friendly parts, fewer extra purchases, roomy installation, included Wi-Fi, an included CPU cooler, and a clear compatibility plan. It does not mean weak or ultra-cheap performance.</div>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#recommendations">See the complete build</a>
-            <a class="button button-secondary" href="#pairings">See why every part fits</a>
-          </div>
-          <p class="affiliate-note">As an Amazon Associate I earn from qualifying purchases. There is no additional cost to you.</p>
-        </div>
-
-        <aside class="hero-panel" aria-labelledby="buildSummaryTitle">
-          <div class="panel-topline">
-            <span class="status-dot"></span>
-            <span>One compatibility-checked starter build</span>
-          </div>
-          <h2 id="buildSummaryTitle">What this build includes</h2>
-          <ul class="check-list">
-            <li>Ryzen 5 9600 processor and included cooler</li>
-            <li>AM5 B850 motherboard with Wi-Fi</li>
-            <li>32GB DDR5-6000 dual-channel memory</li>
-            <li>2TB PCIe 4.0 NVMe storage</li>
-            <li>PNY GeForce RTX 5070 graphics card</li>
-            <li>750W modular ATX 3.1 power supply</li>
-            <li>Roomy airflow case with four included fans</li>
-          </ul>
-        </aside>
-      </div>
-    </section>
-
-    <section class="trust-strip" aria-label="Build advantages">
-      <div class="container trust-grid">
-        <div><strong>One complete starter PC</strong><span>All seven core parts belong together</span></div>
-        <div><strong>First-build friendly</strong><span>Cooler, Wi-Fi, and case fans included</span></div>
-        <div><strong>1440p performance target</strong><span>Built around the RTX 5070</span></div>
-      </div>
-    </section>
-
-    <section class="build-stats-section" id="build-stats">
-      <div class="container">
-        <div class="section-heading">
-          <div>
-            <div class="eyebrow">Starter build at a glance</div>
-            <h2>The important specs in plain English.</h2>
-          </div>
-          <p>These are manufacturer-listed component specifications. Actual performance depends on the game, settings, drivers, cooling, and exact retailer variation.</p>
-        </div>
-        <div class="build-stats-grid">
-          <div class="build-stat-card"><span>Processor</span><strong>6 cores<br />12 threads</strong><small>Up to 5.2GHz · 65W</small></div>
-          <div class="build-stat-card"><span>Graphics</span><strong>RTX 5070<br />12GB</strong><small>6,144 CUDA cores · 250W</small></div>
-          <div class="build-stat-card"><span>Memory</span><strong>32GB<br />DDR5</strong><small>6000MT/s · CL30</small></div>
-          <div class="build-stat-card"><span>Storage</span><strong>2TB<br />NVMe</strong><small>Up to 7,400MB/s reads</small></div>
-          <div class="build-stat-card"><span>Power</span><strong>750W<br />ATX 3.1</strong><small>Fully modular · 12V-2x6</small></div>
-          <div class="build-stat-card"><span>Airflow</span><strong>4× 140mm<br />fans</strong><small>400mm GPU clearance</small></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="categories">
-      <div class="container">
-        <div class="section-heading">
-          <div>
-            <div class="eyebrow">One build, seven components</div>
-            <h2>Explore the starter PC one part at a time.</h2>
-          </div>
-          <p>Selecting a component below filters the complete build. It does not create a separate recommendation list.</p>
-        </div>
-        <div class="category-grid" id="categoryGrid">
-          <button class="category-card active" data-category="all" type="button">
-            <span class="category-icon">✦</span><span>Complete starter PC</span><small>All seven core parts</small>
-          </button>
-          <button class="category-card" data-category="cpu" type="button">
-            <span class="category-icon">CPU</span><span>Processor</span><small>Ryzen 5 9600</small>
-          </button>
-          <button class="category-card" data-category="motherboard" type="button">
-            <span class="category-icon">MB</span><span>Motherboard</span><small>AM5 and Wi-Fi</small>
-          </button>
-          <button class="category-card" data-category="ram" type="button">
-            <span class="category-icon">RAM</span><span>Memory</span><small>32GB DDR5</small>
-          </button>
-          <button class="category-card" data-category="ssd" type="button">
-            <span class="category-icon">SSD</span><span>Storage</span><small>2TB NVMe</small>
-          </button>
-          <button class="category-card" data-category="gpu" type="button">
-            <span class="category-icon">GPU</span><span>Graphics card</span><small>RTX 5070</small>
-          </button>
-          <button class="category-card" data-category="psu" type="button">
-            <span class="category-icon">W</span><span>Power supply</span><small>750W ATX 3.1</small>
-          </button>
-          <button class="category-card" data-category="case" type="button">
-            <span class="category-icon">ATX</span><span>Case</span><small>Four fans included</small>
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-muted" id="recommendations">
-      <div class="container">
-        <div class="section-heading recommendation-heading">
-          <div>
-            <div class="eyebrow">Complete first-time builder setup</div>
-            <h2>Every core part in the starter PC</h2>
-          </div>
-          <div class="filter-wrap">
-            <label class="sr-only" for="productSearch">Search build components</label>
-            <input id="productSearch" type="search" placeholder="Search this build..." autocomplete="off" />
-            <label class="sr-only" for="sortProducts">Sort build components</label>
-            <select id="sortProducts">
-              <option value="build-order">Recommended build order</option>
-              <option value="component">Component A–Z</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="results-line"><span id="resultsCount">0 starter-build components</span><button id="clearFilters" class="text-button" type="button">Show complete starter PC</button></div>
-        <div class="product-grid" id="productGrid"></div>
-        <div class="empty-state" id="emptyState" hidden>
-          <h3>No matching starter-build component</h3>
-          <p>Try another component or search term.</p>
-        </div>
-        <div class="not-included"><strong>Not included in these seven core parts:</strong> an operating-system license, monitor, keyboard, mouse, headset or speakers, Ethernet cable, and basic tools such as a Phillips screwdriver. Thermal paste should be checked on the included cooler before installation.</div>
-      </div>
-    </section>
-
-    <section class="section pairing-section" id="pairings">
-      <div class="container">
-        <div class="section-heading">
-          <div>
-            <div class="eyebrow">Why these are not random parts</div>
-            <h2>How the starter build works together.</h2>
-          </div>
-          <p>Each pairing below connects a physical interface, power requirement, form factor, or platform feature from one component to another.</p>
-        </div>
-
-        <div class="pairing-grid">
-          <article class="pairing-card">
-            <div class="pairing-label">Processor + motherboard</div>
-            <h3>Ryzen 5 9600 fits the B850 board’s AM5 socket.</h3>
-            <p>MSI lists support for Ryzen 9000 desktop processors. The CPU is a 65W model and includes a Wraith Stealth cooler, keeping the first assembly simpler.</p>
-            <div class="pairing-facts"><span>AM5 + AM5</span><span>Ryzen 9000 supported</span><span>Cooler included</span></div>
-          </article>
-
-          <article class="pairing-card">
-            <div class="pairing-label">Motherboard + memory</div>
-            <h3>The board uses DDR5 and supports AMD EXPO.</h3>
-            <p>The Kingston kit is a matched 2×16GB DDR5-6000 CL30 kit. The B850 board supports DDR5, dual-channel operation, and AMD EXPO memory profiles.</p>
-            <div class="pairing-facts"><span>DDR5 + DDR5</span><span>2×16GB dual channel</span><span>AMD EXPO</span></div>
-          </article>
-
-          <article class="pairing-card">
-            <div class="pairing-label">Motherboard + storage</div>
-            <h3>The T500 matches the board’s M.2 PCIe storage support.</h3>
-            <p>The Crucial drive is an M.2 2280 PCIe 4.0 NVMe SSD. The motherboard provides a CPU-connected M.2 slot supporting PCIe 4.0 x4 and 2280 drives.</p>
-            <div class="pairing-facts"><span>M.2 2280</span><span>PCIe 4.0 x4</span><span>No SATA cables</span></div>
-          </article>
-
-          <article class="pairing-card">
-            <div class="pairing-label">Graphics card + power supply</div>
-            <h3>750W provides headroom above PNY’s listed requirement.</h3>
-            <p>PNY lists 650W required system power for this RTX 5070. The RM750e supplies 750W, supports ATX 3.1, and includes a native 12V-2x6 GPU cable.</p>
-            <div class="pairing-facts"><span>650W required</span><span>750W selected</span><span>Modern GPU cable</span></div>
-          </article>
-
-          <article class="pairing-card">
-            <div class="pairing-label">Graphics card + case</div>
-            <h3>The case leaves roughly 100mm of listed GPU length clearance.</h3>
-            <p>The PNY card is about 299.7mm long, while the AIR 903 MAX supports graphics cards up to 400mm. That extra room makes installation and cable routing less cramped.</p>
-            <div class="pairing-facts"><span>299.7mm GPU</span><span>400mm case limit</span><span>≈100mm clearance</span></div>
-          </article>
-
-          <article class="pairing-card">
-            <div class="pairing-label">Motherboard + PSU + case</div>
-            <h3>The form factors and dimensions line up.</h3>
-            <p>The case supports ATX motherboards, matching the MSI board. It allows power supplies up to 240mm, while the RM750e is 140mm long—leaving room for cables.</p>
-            <div class="pairing-facts"><span>ATX board support</span><span>140mm PSU</span><span>240mm case limit</span></div>
-          </article>
-
-          <article class="pairing-card">
-            <div class="pairing-label">Cooling plan</div>
-            <h3>The starter PC includes its basic cooling hardware.</h3>
-            <p>The CPU arrives with a cooler, and the AIR 903 MAX lists three 140mm front fans plus one 140mm rear fan. That avoids making a new builder choose a separate fan package immediately.</p>
-            <div class="pairing-facts"><span>CPU cooler included</span><span>3 front fans</span><span>1 rear fan</span></div>
-          </article>
-
-          <article class="pairing-card">
-            <div class="pairing-label">Upgrade path</div>
-            <h3>The platform has room to grow after the first build.</h3>
-            <p>The motherboard has four DDR5 slots and three M.2 slots, while the case supports larger coolers and long graphics cards. That gives the owner upgrade options without replacing the entire PC.</p>
-            <div class="pairing-facts"><span>4 DDR5 slots</span><span>3 M.2 slots</span><span>AM5 platform</span></div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section comparison-section" id="compatibility">
-      <div class="container comparison-grid">
-        <div>
-          <div class="eyebrow">Overall compatibility verdict</div>
-          <h2>A complete starter PC with a clear 1440p goal.</h2>
-          <p>The parts share the required socket, memory generation, storage interface, motherboard and case form factor, GPU slot, power capacity, and physical clearances. That makes the page a guided first PC build rather than a storefront of disconnected products.</p>
-          <p>Retailer pages can combine multiple capacities, colors, heatsink options, and revisions. Buyers should confirm the exact selected variation before ordering, and memory overclock profiles may require BIOS setup.</p>
-        </div>
-        <div class="verdict-card">
-          <div class="verdict-label">Starter-build verdict</div>
-          <div class="verdict-score"><span>First-build friendly</span><strong>Good fit</strong></div>
-          <ul class="check-list">
-            <li>One full seven-part core PC build</li>
-            <li>AM5 processor and AM5 motherboard</li>
-            <li>DDR5 motherboard and DDR5 memory kit</li>
-            <li>Compatible M.2 PCIe storage</li>
-            <li>PSU capacity above the GPU’s listed requirement</li>
-            <li>Plenty of listed GPU and PSU case clearance</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="guides">
-      <div class="container">
-        <div class="section-heading">
-          <div>
-            <div class="eyebrow">Before ordering the starter PC</div>
-            <h2>Three checks every new builder should make.</h2>
-          </div>
-          <p>These quick checks reduce the chance of choosing the wrong variation on a retailer page.</p>
-        </div>
-        <div class="guide-grid">
-          <article class="guide-card guide-card-featured">
-            <div class="guide-tag">Product variation</div>
-            <h3>Match the exact model and option</h3>
-            <p>Amazon listings may combine multiple capacities, colors, heatsink versions, or hardware revisions. Confirm the selected option matches the product described on this page.</p>
-          </article>
-          <article class="guide-card">
-            <div class="guide-tag">Memory setup</div>
-            <h3>Install the RAM in the recommended two slots</h3>
-            <p>Use the motherboard manual’s two-stick configuration, normally A2 and B2, then enable the correct EXPO profile only after confirming the PC boots reliably.</p>
-          </article>
-          <article class="guide-card">
-            <div class="guide-tag">First boot</div>
-            <h3>Connect the monitor to the graphics card</h3>
-            <p>After assembly, connect DisplayPort or HDMI to the RTX 5070 rather than the motherboard video outputs, then install current chipset and graphics drivers.</p>
-          </article>
-        </div>
-      </div>
-    </section>
+    <section class="hero"><div class="container hero-grid"><div class="hero-copy"><div class="eyebrow">A cozy guide for your gaming setup</div><h1>Build better. Aim better. Understand your gear.</h1><p>PC Upgrade Scout helps amateur gamers choose compatible PC parts, discover equipment used in competitive FPS play, and learn why each product may—or may not—fit them.</p><div class="hero-actions"><a class="button primary" href="starter-1440p-build.html">Explore the starter PC</a><a class="button secondary" href="#gear">Browse popular FPS gear</a></div><p class="affiliate-note">As an Amazon Associate I earn from qualifying purchases. Pro use does not guarantee that a product is right for every player.</p></div><aside class="lofi-window" aria-label="Late-night gaming room illustration"><div class="window-sky"><span class="moon"></span><span class="star s1">✦</span><span class="star s2">✧</span><span class="city"></span></div><div class="desk"><div class="monitor"><div class="screen-glow"></div></div><div class="tower"><i></i><i></i></div><div class="keyboard"></div><div class="mug">☕</div></div><div class="window-caption"><span class="online-dot"></span> learning mode · late-night queue</div></aside></div></section>
+    <section class="path-section" id="paths"><div class="container"><div class="section-heading"><div><div class="eyebrow">Choose your path</div><h2>Start wherever your setup is today.</h2></div><p>You do not need to already understand PC hardware. Every recommendation is paired with plain-English context.</p></div><div class="path-grid"><a class="path-card" href="starter-1440p-build.html"><span class="path-icon">PC</span><div><small>Complete build</small><h3>Build your first gaming PC</h3><p>Use one compatibility-checked parts list and learn how each component connects.</p></div><b>Open build →</b></a><a class="path-card" href="#gear"><span class="path-icon">FPS</span><div><small>Competitive gear</small><h3>Shop mice and headsets</h3><p>Compare gear seen in professional VALORANT setups, with fit notes and drawbacks.</p></div><b>Browse gear →</b></a><a class="path-card" href="#learn"><span class="path-icon">?</span><div><small>Beginner guides</small><h3>Understand what you are buying</h3><p>Learn DPI, mouse shapes, refresh rates, audio basics, PC parts and upgrade logic.</p></div><b>Start learning →</b></a></div></div></section>
+    <section class="featured-build"><div class="container build-feature-grid"><div class="build-visual"><span class="build-badge">Featured starter build</span><div class="pc-case-art"><i></i><i></i><i></i><span>RTX<br/>5070</span></div></div><div class="build-copy"><div class="eyebrow">One complete PC—not random parts</div><h2>Starter 1440p Gaming PC</h2><p>A first-time-builder-focused AM5 system with a Ryzen 5 9600, RTX 5070, 32GB DDR5 memory, 2TB NVMe storage, Wi-Fi and a roomy airflow case.</p><div class="stat-row"><span><b>6C / 12T</b><small>Processor</small></span><span><b>12GB</b><small>GDDR7</small></span><span><b>32GB</b><small>DDR5</small></span><span><b>2TB</b><small>NVMe</small></span></div><a class="button primary" href="starter-1440p-build.html">See all seven compatible parts</a></div></div></section>
+    <section class="gear-section" id="gear"><div class="container"><div class="section-heading"><div><div class="eyebrow">Popular competitive FPS gear</div><h2>Gear professionals use—explained for everyone else.</h2></div><p>Usage figures below come from a July 2026 snapshot of 677 professional VALORANT players. Shape, comfort and budget still matter more than popularity alone.</p></div><div class="gear-toolbar" role="tablist" aria-label="Gear categories"><button class="gear-tab active" data-gear="mouse" type="button">Gaming mice</button><button class="gear-tab" data-gear="headset" type="button">Headsets</button><span id="gearCount"></span></div><div class="gear-grid" id="gearGrid"></div><div class="source-note">Pro-usage data: ProSettings VALORANT mouse and headset datasets, checked July 30, 2026. The HyperX Cloud III Wireless is shown as a wireless alternative and is not counted as the same model as the wired Cloud III in that dataset.</div></div></section>
+    <section class="learn-section" id="learn"><div class="container"><div class="section-heading"><div><div class="eyebrow">Gaming hardware, translated</div><h2>Learn the terms before spending the money.</h2></div><p>These are the first guides the hub will expand into full educational pages.</p></div><div class="learn-grid"><article><span>01</span><h3>DPI vs. eDPI</h3><p>Why a mouse’s maximum DPI matters less than the sensitivity you actually play with.</p><a href="#">Guide coming soon</a></article><article><span>02</span><h3>Mouse shape and grip</h3><p>Symmetrical versus ergonomic shapes, plus palm, claw and fingertip grip basics.</p><a href="#">Guide coming soon</a></article><article><span>03</span><h3>Headset audio for FPS</h3><p>Positioning, imaging, isolation, microphone quality and when wireless is worth it.</p><a href="#">Guide coming soon</a></article><article><span>04</span><h3>Your first PC build</h3><p>Socket, memory, storage, power and case-clearance checks explained step by step.</p><a href="starter-1440p-build.html">Read the build guide</a></article></div></div></section>
   </main>
-
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <a class="brand footer-brand" href="index.html"><span class="brand-mark">US</span><span>PC Upgrade Scout</span></a>
-        <p>Complete starter PC builds with component stats, clear compatibility explanations, and direct links to every part.</p>
-      </div>
-      <div>
-        <h2>Starter build</h2>
-        <a href="#build-stats">Build stats</a>
-        <a href="#recommendations">All seven parts</a>
-        <a href="#pairings">Why they work together</a>
-      </div>
-      <div>
-        <h2>Legal</h2>
-        <a href="affiliate-disclosure.html">Affiliate disclosure</a>
-        <a href="privacy.html">Privacy policy</a>
-        <a href="about.html">About</a>
-      </div>
-    </div>
-    <div class="container footer-bottom">
-      <span>© <span id="currentYear"></span> PC Upgrade Scout.</span>
-      <span>Specifications, prices, and availability can change after publication.</span>
-    </div>
-  </footer>
+  <footer class="site-footer"><div class="container footer-grid"><div class="footer-brand"><img src="pc-upgrade-scout-logo.svg" alt="PC Upgrade Scout" /><p>A beginner-friendly hub for building PCs, discovering gaming gear and understanding every purchase.</p></div><div><h2>Explore</h2><a href="starter-1440p-build.html">Starter PC build</a><a href="#gear">Gaming gear</a><a href="#learn">Education</a></div><div><h2>Legal</h2><a href="affiliate-disclosure.html">Affiliate disclosure</a><a href="privacy.html">Privacy policy</a><a href="about.html">About</a></div></div><div class="container footer-bottom"><span>© <span id="currentYear"></span> PC Upgrade Scout.</span><span>Prices, availability and pro gear usage can change.</span></div></footer>
 </body>
 </html>
