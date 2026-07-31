@@ -6,10 +6,17 @@ const products = [
     label: "CPU + included cooler",
     visual: "CPU",
     name: "AMD Ryzen 5 9600 with Wraith Stealth Cooler",
-    summary: "A beginner-friendly 6-core, 12-thread AM5 processor. The included Wraith Stealth cooler removes the need to choose a separate CPU cooler for this build.",
+    summary: "A first-time-builder-friendly Zen 5 processor with enough cores for modern gaming, everyday multitasking, and background apps without requiring a separate cooler purchase.",
     bestFor: "1440p gaming and everyday use",
     fit: "AM5 socket · Cooler included",
-    pros: ["6 cores and 12 threads", "65W processor", "Works with the selected B850 motherboard"],
+    stats: [
+      ["Cores / threads", "6 / 12"],
+      ["Clock speed", "3.8–5.2 GHz"],
+      ["Total cache", "38MB"],
+      ["Default power", "65W"]
+    ],
+    worksWith: "It drops directly into the motherboard’s AM5 socket, and the included Wraith Stealth cooler keeps this starter build from needing another part.",
+    pros: ["Modern Zen 5 architecture", "Integrated graphics for troubleshooting", "Low-power 65W design"],
     url: "https://amzn.to/4pMuKF8"
   },
   {
@@ -19,10 +26,17 @@ const products = [
     label: "AM5 foundation",
     visual: "B850",
     name: "MSI B850 Gaming Plus WiFi Motherboard",
-    summary: "The full-size ATX motherboard that connects the build. It supports Ryzen 9000 processors, DDR5 memory, AMD EXPO profiles, NVMe storage, and built-in wireless networking.",
+    summary: "The central platform for the starter build, with support for the selected Ryzen processor, DDR5 memory, multiple NVMe drives, modern networking, and future AM5 upgrades.",
     bestFor: "A straightforward modern platform",
-    fit: "ATX · AM5 · DDR5 · Wi-Fi",
-    pros: ["Ryzen 9000 support", "Four DDR5 memory slots", "Built-in Wi-Fi and Bluetooth"],
+    fit: "ATX · AM5 · DDR5 · Wi-Fi 7",
+    stats: [
+      ["CPU socket", "AM5"],
+      ["Memory", "4× DDR5 · 256GB"],
+      ["M.2 storage", "3 slots"],
+      ["Networking", "Wi-Fi 7 · 5G LAN"]
+    ],
+    worksWith: "MSI lists Ryzen 9000 support, AMD EXPO, dual-channel DDR5, a PCIe 5.0 x16 graphics slot, and PCIe 4.0 M.2 storage support—all matching this parts list.",
+    pros: ["Supports the Ryzen 5 9600", "Built-in wireless networking", "Room for later memory and storage upgrades"],
     url: "https://amzn.to/4fv65l9"
   },
   {
@@ -32,10 +46,17 @@ const products = [
     label: "Matched memory kit",
     visual: "32GB",
     name: "Kingston FURY Beast 32GB DDR5-6000 CL30 AMD EXPO Kit",
-    summary: "A matched 2×16GB DDR5 kit with an AMD EXPO profile. Thirty-two gigabytes is a comfortable target for gaming, multitasking, and background applications.",
+    summary: "A matched two-stick kit that gives the starter PC plenty of memory for gaming and multitasking while using an AMD EXPO profile designed for compatible Ryzen platforms.",
     bestFor: "Gaming and multitasking",
     fit: "2×16GB · DDR5-6000 · CL30 · EXPO",
-    pros: ["Dual-channel matched kit", "Low CL30 latency", "Designed for AMD EXPO"],
+    stats: [
+      ["Capacity", "32GB"],
+      ["Configuration", "2×16GB"],
+      ["Rated speed", "6000MT/s"],
+      ["Profile", "CL30 · 1.4V"]
+    ],
+    worksWith: "The motherboard uses DDR5, supports dual-channel mode and AMD EXPO, and officially supports 6000MT/s configurations depending on the CPU and memory setup.",
+    pros: ["Matched dual-channel pair", "Low CL30 latency", "Comfortable capacity for current games"],
     url: "https://amzn.to/4fLhLio"
   },
   {
@@ -45,10 +66,17 @@ const products = [
     label: "Fast 2TB storage",
     visual: "2TB",
     name: "Crucial T500 2TB PCIe Gen4 NVMe M.2 SSD",
-    summary: "A roomy PCIe 4.0 NVMe drive for Windows, applications, and a sizable game library. This selection is the version without its own heatsink.",
+    summary: "A fast, cable-free system drive with room for Windows, applications, and a useful game library. This selection is the version without its own heatsink.",
     bestFor: "Operating system and game library",
     fit: "M.2 2280 · PCIe 4.0 NVMe",
-    pros: ["Two-terabyte capacity", "No SATA cables required", "Fits the motherboard M.2 slot"],
+    stats: [
+      ["Capacity", "2TB"],
+      ["Interface", "PCIe 4.0 NVMe"],
+      ["Read speed", "Up to 7,400MB/s"],
+      ["Write speed", "Up to 7,000MB/s"]
+    ],
+    worksWith: "The B850 board includes an M.2 slot that supports PCIe 4.0 x4 and 2280 drives, so the non-heatsink T500 can install beneath the motherboard’s M.2 cooling cover.",
+    pros: ["Fast Gen4 performance", "Two-terabyte capacity", "No power or data cables"],
     url: "https://amzn.to/4g3gEfg"
   },
   {
@@ -58,10 +86,17 @@ const products = [
     label: "1440p graphics card",
     visual: "5070",
     name: "PNY NVIDIA GeForce RTX 5070 OC Triple Fan 12GB",
-    summary: "The main gaming component in this build. It provides 12GB of GDDR7 memory and targets high-quality 1440p gaming with modern NVIDIA rendering features.",
+    summary: "The main gaming component in this starter PC, built for high-quality 1440p play with NVIDIA Blackwell features, DLSS 4 support, and triple-fan cooling.",
     bestFor: "High-quality 1440p gaming",
-    fit: "PCIe x16 · Triple-fan card",
-    pros: ["12GB GDDR7 memory", "Overclocked triple-fan design", "Paired with a modern ATX 3.1 PSU"],
+    fit: "PCIe 5.0 x16 · 2.4 slots · 299.7mm",
+    stats: [
+      ["CUDA cores", "6,144"],
+      ["Graphics memory", "12GB GDDR7"],
+      ["Board power", "250W"],
+      ["Card length", "299.7mm"]
+    ],
+    worksWith: "It uses the motherboard’s main x16 slot, fits inside the case with about 100mm of listed length clearance, and pairs with a 750W PSU above PNY’s 650W system recommendation.",
+    pros: ["12GB GDDR7 memory", "Three DisplayPort plus one HDMI", "Triple-fan cooling design"],
     url: "https://amzn.to/4yOZadX"
   },
   {
@@ -71,10 +106,17 @@ const products = [
     label: "Modern power supply",
     visual: "750W",
     name: "Corsair RM750e 750W Fully Modular ATX 3.1 Power Supply",
-    summary: "A modern, fully modular power supply selected to provide sensible headroom for the Ryzen 5 and RTX 5070 combination while keeping cable management approachable.",
-    bestFor: "Powering the complete build",
+    summary: "A compact modern power supply with enough capacity for the selected components and fully modular cables that make a first build easier to organize.",
+    bestFor: "Powering the complete starter build",
     fit: "750W · Fully modular · ATX 3.1",
-    pros: ["Modern GPU power support", "Only install the cables you need", "Comfortable capacity for this parts list"],
+    stats: [
+      ["Rated output", "750W"],
+      ["GPU cable", "12V-2x6 · 600W"],
+      ["Efficiency", "Cybenetics Gold"],
+      ["PSU length", "140mm"]
+    ],
+    worksWith: "The RTX 5070 lists a 650W system requirement, while this unit supplies 750W and a native modern GPU cable. Its 140mm body is well under the case’s 240mm PSU limit.",
+    pros: ["ATX 3.1 and PCIe 5.1 support", "Install only the cables needed", "Approximately 100mm of listed case clearance"],
     url: "https://amzn.to/3RKEhzX"
   },
   {
@@ -84,10 +126,17 @@ const products = [
     label: "Airflow-focused case",
     visual: "ATX",
     name: "Montech AIR 903 MAX Case",
-    summary: "A roomy ATX case chosen to make first-time assembly and cable routing less cramped while providing an airflow-focused layout for the selected components.",
+    summary: "A roomy chassis chosen to reduce the cramped feeling that makes first-time assembly harder, while including multiple large fans for airflow out of the box.",
     bestFor: "First-time building and airflow",
-    fit: "ATX mid-tower",
-    pros: ["Supports the selected ATX board", "Roomy internal layout", "Designed around strong airflow"],
+    fit: "ATX mid-tower · Four 140mm fans included",
+    stats: [
+      ["Board support", "E-ATX through Mini-ITX"],
+      ["GPU clearance", "Up to 400mm"],
+      ["PSU clearance", "Up to 240mm"],
+      ["Included fans", "4× 140mm"]
+    ],
+    worksWith: "It supports the selected ATX motherboard, allows a 400mm GPU while the PNY card is about 300mm long, and allows a 240mm PSU while the RM750e is 140mm long.",
+    pros: ["Room for every selected component", "Three front and one rear fan included", "Front USB-C connection"],
     url: "https://amzn.to/4vV2HFb"
   }
 ];
@@ -131,6 +180,15 @@ function productCard(product) {
           <div><span>Best for</span><strong>${product.bestFor}</strong></div>
           <div><span>Compatibility</span><strong>${product.fit}</strong></div>
         </div>
+        <div class="product-specs">
+          ${product.stats.map(([label, value]) => `
+            <div class="product-spec">
+              <span>${label}</span>
+              <strong>${value}</strong>
+            </div>
+          `).join("")}
+        </div>
+        <p class="pairing-note"><strong>Why it fits:</strong> ${product.worksWith}</p>
         <ul class="product-pros">${product.pros.map(item => `<li>${item}</li>`).join("")}</ul>
         <div class="product-footer">
           <div class="price-band"><span>Retailer</span><strong>Check current price</strong></div>
@@ -144,7 +202,8 @@ function productCard(product) {
 function getFilteredProducts() {
   const filtered = products.filter(product => {
     const categoryMatch = state.category === "all" || product.category === state.category;
-    const searchable = `${product.name} ${product.summary} ${product.category} ${product.bestFor} ${product.fit}`.toLowerCase();
+    const statText = product.stats.flat().join(" ");
+    const searchable = `${product.name} ${product.summary} ${product.category} ${product.bestFor} ${product.fit} ${statText} ${product.worksWith}`.toLowerCase();
     return categoryMatch && searchable.includes(state.query);
   });
 
@@ -160,7 +219,7 @@ function getFilteredProducts() {
 function renderProducts() {
   const filtered = getFilteredProducts();
   productGrid.innerHTML = filtered.map(productCard).join("");
-  resultsCount.textContent = `${filtered.length} build component${filtered.length === 1 ? "" : "s"}`;
+  resultsCount.textContent = `${filtered.length} starter-build component${filtered.length === 1 ? "" : "s"}`;
   emptyState.hidden = filtered.length !== 0;
 }
 
