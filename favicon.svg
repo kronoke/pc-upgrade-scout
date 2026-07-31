@@ -1,1 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="18" fill="#6de4c7"/><path d="M17 20h9v15c0 4 2 6 6 6s6-2 6-6V20h9v16c0 9-6 14-15 14s-15-5-15-14V20Z" fill="#08101f"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="PC Upgrade Scout">
+  <defs>
+    <linearGradient id="bg" x1="8" y1="6" x2="56" y2="58" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#24213f"/>
+      <stop offset="0.55" stop-color="#5b4f86"/>
+      <stop offset="1" stop-color="#d782a2"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="17" y1="17" x2="45" y2="42" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#312e63"/>
+      <stop offset="1" stop-color="#ef9fba"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="60" height="60" rx="17" fill="#17152a"/>
+  <rect x="7" y="7" width="50" height="50" rx="14" fill="url(#bg)" stroke="#f4e6ca" stroke-width="2"/>
+  <rect x="13" y="15" width="36" height="27" rx="5" fill="#17152a" stroke="#f4e6ca" stroke-width="2"/>
+  <rect x="17" y="19" width="28" height="19" rx="3" fill="url(#screen)"/>
+  <path d="M27 21a6.5 6.5 0 1 0 5.5 10A5.5 5.5 0 1 1 27 21Z" fill="#fff1c9"/>
+  <path d="m39 22 .9 2.1L42 25l-2.1.9L39 28l-.9-2.1L36 25l2.1-.9L39 22Z" fill="#fff1c9"/>
+  <rect x="25" y="43" width="12" height="3" rx="1.5" fill="#f4e6ca"/>
+  <path d="M20 48h22" stroke="#f4e6ca" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="45" cy="45" r="10" fill="#d8f0e8" stroke="#17152a" stroke-width="2.5"/>
+  <circle cx="45" cy="45" r="7" fill="#fff6df" stroke="#5b4f86" stroke-width="1.5"/>
+  <path d="m48.8 40.8-2.2 5.8-5.8 2.2 2.2-5.8 5.8-2.2Z" fill="#4faeaa" stroke="#17152a" stroke-width="1.2" stroke-linejoin="round"/>
+  <circle cx="45" cy="45" r="1.2" fill="#17152a"/>
+</svg>
