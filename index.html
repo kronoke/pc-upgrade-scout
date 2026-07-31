@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Straightforward PC upgrade recommendations, compatibility notes, and curated gaming hardware picks." />
+  <meta name="theme-color" content="#08101f" />
+  <title>PC Upgrade Scout | Smarter Gaming PC Upgrades</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="PC Upgrade Scout home">
+        <span class="brand-mark" aria-hidden="true">US</span>
+        <span>PC Upgrade Scout</span>
+      </a>
+      <button class="menu-button" id="menuButton" aria-expanded="false" aria-controls="mainNav">Menu</button>
+      <nav class="main-nav" id="mainNav" aria-label="Primary navigation">
+        <a href="#recommendations">Top picks</a>
+        <a href="#categories">Categories</a>
+        <a href="#guides">Guides</a>
+        <a href="affiliate-disclosure.html">Disclosure</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="hero-glow hero-glow-one"></div>
+      <div class="hero-glow hero-glow-two"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">No-hype PC upgrade advice</div>
+          <h1>Upgrade your gaming PC without wasting money.</h1>
+          <p class="hero-lede">Compare practical picks, check compatibility, and see who each upgrade is actually for.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#recommendations">Browse top picks</a>
+            <a class="button button-secondary" href="#quick-check">Check your setup</a>
+          </div>
+          <p class="affiliate-note">This site may earn a commission from qualifying purchases at no extra cost to you.</p>
+        </div>
+
+        <aside class="hero-panel" id="quick-check" aria-labelledby="quickCheckTitle">
+          <div class="panel-topline">
+            <span class="status-dot"></span>
+            <span>Quick compatibility check</span>
+          </div>
+          <h2 id="quickCheckTitle">What are you upgrading?</h2>
+          <form id="upgradeForm">
+            <label for="upgradeType">Component</label>
+            <select id="upgradeType" name="upgradeType">
+              <option value="gpu">Graphics card</option>
+              <option value="ssd">SSD / storage</option>
+              <option value="ram">Memory / RAM</option>
+              <option value="monitor">Gaming monitor</option>
+              <option value="psu">Power supply</option>
+            </select>
+
+            <label for="budget">Maximum budget</label>
+            <select id="budget" name="budget">
+              <option value="200">Under $200</option>
+              <option value="400">Under $400</option>
+              <option value="700">Under $700</option>
+              <option value="1000">Under $1,000</option>
+              <option value="9999">No fixed budget</option>
+            </select>
+
+            <button class="button button-primary button-full" type="submit">Show matching picks</button>
+          </form>
+          <p class="form-result" id="formResult" role="status" aria-live="polite"></p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="trust-strip" aria-label="What makes our recommendations different">
+      <div class="container trust-grid">
+        <div><strong>Compatibility first</strong><span>Fit, power, and platform notes</span></div>
+        <div><strong>Real use cases</strong><span>Recommendations by player type</span></div>
+        <div><strong>No fake urgency</strong><span>Clear value and tradeoffs</span></div>
+      </div>
+    </section>
+
+    <section class="section" id="categories">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow">Shop by component</div>
+            <h2>Start with the part you need.</h2>
+          </div>
+          <p>Use these categories to narrow the recommendations below.</p>
+        </div>
+        <div class="category-grid" id="categoryGrid">
+          <button class="category-card active" data-category="all" type="button">
+            <span class="category-icon">✦</span><span>All picks</span><small>Curated shortlist</small>
+          </button>
+          <button class="category-card" data-category="gpu" type="button">
+            <span class="category-icon">GPU</span><span>Graphics cards</span><small>FPS and resolution</small>
+          </button>
+          <button class="category-card" data-category="ssd" type="button">
+            <span class="category-icon">SSD</span><span>Storage</span><small>Load times and space</small>
+          </button>
+          <button class="category-card" data-category="ram" type="button">
+            <span class="category-icon">RAM</span><span>Memory</span><small>Capacity and stability</small>
+          </button>
+          <button class="category-card" data-category="monitor" type="button">
+            <span class="category-icon">Hz</span><span>Monitors</span><small>Clarity and refresh rate</small>
+          </button>
+          <button class="category-card" data-category="psu" type="button">
+            <span class="category-icon">W</span><span>Power supplies</span><small>Safe upgrade headroom</small>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-muted" id="recommendations">
+      <div class="container">
+        <div class="section-heading recommendation-heading">
+          <div>
+            <div class="eyebrow">Editor shortlist</div>
+            <h2>Recommended upgrades</h2>
+          </div>
+          <div class="filter-wrap">
+            <label class="sr-only" for="productSearch">Search products</label>
+            <input id="productSearch" type="search" placeholder="Search picks..." autocomplete="off" />
+            <label class="sr-only" for="sortProducts">Sort products</label>
+            <select id="sortProducts">
+              <option value="featured">Featured</option>
+              <option value="price-low">Price: low to high</option>
+              <option value="price-high">Price: high to low</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="results-line"><span id="resultsCount">0 recommendations</span><button id="clearFilters" class="text-button" type="button">Clear filters</button></div>
+        <div class="product-grid" id="productGrid"></div>
+        <div class="empty-state" id="emptyState" hidden>
+          <h3>No matching products yet</h3>
+          <p>Try another category, budget, or search term.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section comparison-section">
+      <div class="container comparison-grid">
+        <div>
+          <div class="eyebrow">Example compatibility verdict</div>
+          <h2>Will an 850W power supply handle a modern GPU?</h2>
+          <p>Usually yes for many high-performance single-GPU systems, but the exact answer depends on the graphics card model, CPU, connector requirements, and the quality and age of the power supply.</p>
+          <a class="inline-link" href="#guides">Read the full compatibility guide <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="verdict-card">
+          <div class="verdict-label">Example verdict</div>
+          <div class="verdict-score"><span>Good fit</span><strong>8.5/10</strong></div>
+          <ul class="check-list">
+            <li>Enough wattage for many builds</li>
+            <li>Confirm the required GPU connectors</li>
+            <li>Prefer a reputable modern PSU</li>
+            <li>Leave room for transient power spikes</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="guides">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow">Buyer education</div>
+            <h2>Helpful upgrade guides</h2>
+          </div>
+          <p>These article cards are ready to become your first SEO content pages.</p>
+        </div>
+        <div class="guide-grid">
+          <article class="guide-card guide-card-featured">
+            <div class="guide-tag">Start here</div>
+            <h3>How to know which PC part to upgrade first</h3>
+            <p>A practical checklist for separating CPU, GPU, memory, storage, and monitor bottlenecks.</p>
+            <a href="#">Draft guide <span aria-hidden="true">→</span></a>
+          </article>
+          <article class="guide-card">
+            <div class="guide-tag">Compatibility</div>
+            <h3>How to check if a graphics card fits your PC</h3>
+            <p>Case clearance, motherboard slots, power connectors, and PSU capacity explained.</p>
+            <a href="#">Draft guide <span aria-hidden="true">→</span></a>
+          </article>
+          <article class="guide-card">
+            <div class="guide-tag">Storage</div>
+            <h3>Is a Gen 4 NVMe SSD worth it for gaming?</h3>
+            <p>Where faster storage matters, where it does not, and what specs to compare.</p>
+            <a href="#">Draft guide <span aria-hidden="true">→</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section newsletter-section">
+      <div class="container newsletter-card">
+        <div>
+          <div class="eyebrow">Build the audience</div>
+          <h2>Add deal alerts later.</h2>
+          <p>This placeholder can connect to ConvertKit, Beehiiv, Mailchimp, or another email service after launch.</p>
+        </div>
+        <form class="newsletter-form" onsubmit="event.preventDefault(); document.getElementById('newsletterStatus').textContent='Email collection is not connected yet.';">
+          <label class="sr-only" for="email">Email address</label>
+          <input id="email" type="email" placeholder="you@example.com" required />
+          <button class="button button-primary" type="submit">Join alerts</button>
+          <span id="newsletterStatus" role="status" aria-live="polite"></span>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand footer-brand" href="index.html"><span class="brand-mark">US</span><span>PC Upgrade Scout</span></a>
+        <p>Practical PC upgrade recommendations with clear compatibility notes and honest tradeoffs.</p>
+      </div>
+      <div>
+        <h2>Explore</h2>
+        <a href="#recommendations">Top picks</a>
+        <a href="#categories">Categories</a>
+        <a href="#guides">Guides</a>
+      </div>
+      <div>
+        <h2>Legal</h2>
+        <a href="affiliate-disclosure.html">Affiliate disclosure</a>
+        <a href="privacy.html">Privacy policy</a>
+        <a href="about.html">About</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span id="currentYear"></span> PC Upgrade Scout.</span>
+      <span>Prices and availability can change after publication.</span>
+    </div>
+  </footer>
+</body>
+</html>
