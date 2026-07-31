@@ -2,16 +2,16 @@ const products = [
   {
     id: 1,
     category: "gpu",
-    label: "Best value GPU",
-    visual: "GPU",
-    name: "1440p Performance Pick",
-    summary: "A balanced graphics-card tier for high-refresh 1440p gaming without jumping to flagship pricing.",
+    label: "Featured 1440p GPU",
+    visual: "RTX 5070",
+    name: "PNY GeForce RTX 5070 12GB Overclocked Triple Fan",
+    summary: "A factory-overclocked RTX 5070 with 12GB of GDDR7 memory and triple-fan cooling for high-refresh 1440p gaming.",
     price: 599,
-    priceLabel: "$500–$700",
-    bestFor: "1440p gaming",
-    fit: "Mid / full tower",
-    pros: ["Strong high-refresh performance", "Good feature support", "Reasonable power target"],
-    url: "https://example.com/replace-with-affiliate-link-1"
+    priceLabel: "Check current price",
+    bestFor: "High-refresh 1440p gaming",
+    fit: "2.4-slot card; 650W PSU recommended",
+    pros: ["12GB GDDR7 memory", "Triple-fan cooling", "DLSS 4 support"],
+    url: "https://amzn.to/44Ve6K7"
   },
   {
     id: 2,
