@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 150" role="img" aria-labelledby="title desc">
+  <title id="title">PC Upgrade Scout</title>
+  <desc id="desc">A cozy night gaming monitor and compass beside the PC Upgrade Scout wordmark.</desc>
+  <defs>
+    <linearGradient id="screen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4c467d"/><stop offset=".55" stop-color="#8a6f9d"/><stop offset="1" stop-color="#efaa9f"/>
+    </linearGradient>
+    <linearGradient id="frame" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#fff1d8"/><stop offset="1" stop-color="#e8d8cb"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(8 8)">
+    <rect x="0" y="0" width="142" height="126" rx="34" fill="#16152c"/>
+    <rect x="7" y="7" width="128" height="112" rx="29" fill="url(#frame)"/>
+    <rect x="15" y="15" width="112" height="91" rx="22" fill="#22203c"/>
+    <rect x="22" y="22" width="98" height="72" rx="15" fill="url(#screen)"/>
+    <circle cx="48" cy="43" r="14" fill="#fff3d9"/>
+    <circle cx="55" cy="37" r="14" fill="#575083"/>
+    <path d="M93 34l3 7 7 3-7 3-3 7-3-7-7-3 7-3zM108 52l2 4 4 2-4 2-2 4-2-4-4-2 4-2z" fill="#fff3d9"/>
+    <rect x="32" y="57" width="25" height="31" rx="5" fill="#1a1931" stroke="#8bd8cf" stroke-width="2"/>
+    <circle cx="44.5" cy="67" r="6" fill="none" stroke="#ed9ab4" stroke-width="2"/>
+    <circle cx="44.5" cy="81" r="6" fill="none" stroke="#8bd8cf" stroke-width="2"/>
+    <rect x="62" y="61" width="47" height="25" rx="4" fill="#1b1932"/>
+    <rect x="65" y="64" width="41" height="18" rx="3" fill="#9d789d"/>
+    <path d="M64 92h47l-5 6H69z" fill="#d9a7ba"/>
+    <rect x="53" y="107" width="47" height="8" rx="4" fill="#22203c"/>
+    <g transform="translate(101 86)">
+      <circle cx="25" cy="25" r="24" fill="#17162e"/>
+      <circle cx="25" cy="25" r="18" fill="#fff2dc" stroke="#8bd8cf" stroke-width="3"/>
+      <path d="M25 9l5 12-5 4-5-4z" fill="#ed9ab4"/><path d="M25 41l-5-12 5-4 5 4z" fill="#4f4779"/>
+      <circle cx="25" cy="25" r="3" fill="#17162e"/>
+      <path d="M44 3l2.5 6 6 2.5-6 2.5-2.5 6-2.5-6-6-2.5 6-2.5z" fill="#f7d59b"/>
+    </g>
+  </g>
+  <g transform="translate(180 39)" font-family="Manrope,Arial,sans-serif">
+    <text x="0" y="36" font-size="39" font-weight="800" letter-spacing="-1.8" fill="#fff4df">PC Upgrade</text>
+    <text x="0" y="79" font-size="39" font-weight="800" letter-spacing="-1.8" fill="#ed9ab4">Scout</text>
+    <rect x="0" y="92" width="240" height="3" rx="2" fill="#8bd8cf" opacity=".8"/>
+  </g>
+</svg>
