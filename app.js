@@ -1,137 +1,111 @@
 const products = [
   {
     id: 1,
-    category: "gpu",
-    label: "Featured 1440p GPU",
-    visual: "RTX 5070",
-    name: "PNY GeForce RTX 5070 12GB Overclocked Triple Fan",
-    summary: "A factory-overclocked RTX 5070 with 12GB of GDDR7 memory and triple-fan cooling for high-refresh 1440p gaming.",
-    price: 599,
-    priceLabel: "Check current price",
-    bestFor: "High-refresh 1440p gaming",
-    fit: "2.4-slot card; 650W PSU recommended",
-    pros: ["12GB GDDR7 memory", "Triple-fan cooling", "DLSS 4 support"],
-    url: "https://amzn.to/44Ve6K7"
+    order: 1,
+    category: "cpu",
+    label: "CPU + included cooler",
+    visual: "CPU",
+    name: "AMD Ryzen 5 9600 with Wraith Stealth Cooler",
+    summary: "A beginner-friendly 6-core, 12-thread AM5 processor. The included Wraith Stealth cooler removes the need to choose a separate CPU cooler for this build.",
+    bestFor: "1440p gaming and everyday use",
+    fit: "AM5 socket · Cooler included",
+    pros: ["6 cores and 12 threads", "65W processor", "Works with the selected B850 motherboard"],
+    url: "https://amzn.to/4pMuKF8"
   },
   {
     id: 2,
-    category: "ssd",
-    label: "Fast storage",
-    visual: "M.2",
-    name: "2TB Gen 4 NVMe Pick",
-    summary: "A fast, roomy SSD tier for game libraries, large downloads, and everyday responsiveness.",
-    price: 149,
-    priceLabel: "$120–$180",
-    bestFor: "Game libraries",
-    fit: "M.2 2280 slot",
-    pros: ["High sequential speeds", "Comfortable 2TB capacity", "No extra cables"],
-    url: "https://example.com/replace-with-affiliate-link-2"
+    order: 2,
+    category: "motherboard",
+    label: "AM5 foundation",
+    visual: "B850",
+    name: "MSI B850 Gaming Plus WiFi Motherboard",
+    summary: "The full-size ATX motherboard that connects the build. It supports Ryzen 9000 processors, DDR5 memory, AMD EXPO profiles, NVMe storage, and built-in wireless networking.",
+    bestFor: "A straightforward modern platform",
+    fit: "ATX · AM5 · DDR5 · Wi-Fi",
+    pros: ["Ryzen 9000 support", "Four DDR5 memory slots", "Built-in Wi-Fi and Bluetooth"],
+    url: "https://amzn.to/4fv65l9"
   },
   {
     id: 3,
+    order: 3,
     category: "ram",
-    label: "Safe capacity",
+    label: "Matched memory kit",
     visual: "32GB",
-    name: "32GB Memory Upgrade",
-    summary: "A practical capacity target for modern gaming, multitasking, content creation, and heavy browser use.",
-    price: 89,
-    priceLabel: "$70–$120",
-    bestFor: "Gaming + multitasking",
-    fit: "Match DDR generation",
-    pros: ["Enough capacity for most users", "Reduces memory pressure", "Often better than mixed kits"],
-    url: "https://example.com/replace-with-affiliate-link-3"
+    name: "Kingston FURY Beast 32GB DDR5-6000 CL30 AMD EXPO Kit",
+    summary: "A matched 2×16GB DDR5 kit with an AMD EXPO profile. Thirty-two gigabytes is a comfortable target for gaming, multitasking, and background applications.",
+    bestFor: "Gaming and multitasking",
+    fit: "2×16GB · DDR5-6000 · CL30 · EXPO",
+    pros: ["Dual-channel matched kit", "Low CL30 latency", "Designed for AMD EXPO"],
+    url: "https://amzn.to/4fLhLio"
   },
   {
     id: 4,
-    category: "monitor",
-    label: "Competitive pick",
-    visual: "240Hz",
-    name: "High-Refresh 1440p Monitor",
-    summary: "A sharp, responsive display tier for competitive games without dropping back to 1080p resolution.",
-    price: 399,
-    priceLabel: "$300–$500",
-    bestFor: "Fast-paced games",
-    fit: "DisplayPort preferred",
-    pros: ["Smooth motion", "Sharper than 1080p", "Strong all-around setup"],
-    url: "https://example.com/replace-with-affiliate-link-4"
+    order: 4,
+    category: "ssd",
+    label: "Fast 2TB storage",
+    visual: "2TB",
+    name: "Crucial T500 2TB PCIe Gen4 NVMe M.2 SSD",
+    summary: "A roomy PCIe 4.0 NVMe drive for Windows, applications, and a sizable game library. This selection is the version without its own heatsink.",
+    bestFor: "Operating system and game library",
+    fit: "M.2 2280 · PCIe 4.0 NVMe",
+    pros: ["Two-terabyte capacity", "No SATA cables required", "Fits the motherboard M.2 slot"],
+    url: "https://amzn.to/4g3gEfg"
   },
   {
     id: 5,
-    category: "psu",
-    label: "Upgrade headroom",
-    visual: "850W",
-    name: "850W Gold Power Supply",
-    summary: "A sensible wattage tier for many higher-end single-GPU builds with room for component upgrades.",
-    price: 139,
-    priceLabel: "$110–$180",
-    bestFor: "High-end single GPU",
-    fit: "ATX case",
-    pros: ["Useful power headroom", "Efficiency-focused tier", "Modern cable options"],
-    url: "https://example.com/replace-with-affiliate-link-5"
+    order: 5,
+    category: "gpu",
+    label: "1440p graphics card",
+    visual: "5070",
+    name: "PNY NVIDIA GeForce RTX 5070 OC Triple Fan 12GB",
+    summary: "The main gaming component in this build. It provides 12GB of GDDR7 memory and targets high-quality 1440p gaming with modern NVIDIA rendering features.",
+    bestFor: "High-quality 1440p gaming",
+    fit: "PCIe x16 · Triple-fan card",
+    pros: ["12GB GDDR7 memory", "Overclocked triple-fan design", "Paired with a modern ATX 3.1 PSU"],
+    url: "https://amzn.to/4yOZadX"
   },
   {
     id: 6,
-    category: "gpu",
-    label: "Budget upgrade",
-    visual: "1080p",
-    name: "Efficient 1080p GPU Pick",
-    summary: "A lower-cost card tier for esports and mainstream 1080p gaming with modest power requirements.",
-    price: 279,
-    priceLabel: "$230–$330",
-    bestFor: "1080p gaming",
-    fit: "Most mid towers",
-    pros: ["Lower upfront cost", "Easy PSU requirements", "Solid esports performance"],
-    url: "https://example.com/replace-with-affiliate-link-6"
+    order: 6,
+    category: "psu",
+    label: "Modern power supply",
+    visual: "750W",
+    name: "Corsair RM750e 750W Fully Modular ATX 3.1 Power Supply",
+    summary: "A modern, fully modular power supply selected to provide sensible headroom for the Ryzen 5 and RTX 5070 combination while keeping cable management approachable.",
+    bestFor: "Powering the complete build",
+    fit: "750W · Fully modular · ATX 3.1",
+    pros: ["Modern GPU power support", "Only install the cables you need", "Comfortable capacity for this parts list"],
+    url: "https://amzn.to/3RKEhzX"
   },
   {
     id: 7,
-    category: "ssd",
-    label: "Budget storage",
-    visual: "1TB",
-    name: "1TB NVMe Starter Upgrade",
-    summary: "An affordable way to move away from a small boot drive or slower SATA-based game storage.",
-    price: 69,
-    priceLabel: "$55–$90",
-    bestFor: "First NVMe upgrade",
-    fit: "M.2 slot required",
-    pros: ["Affordable entry point", "Simple installation", "Fast everyday loading"],
-    url: "https://example.com/replace-with-affiliate-link-7"
-  },
-  {
-    id: 8,
-    category: "monitor",
-    label: "Best starter display",
-    visual: "165Hz",
-    name: "Affordable 1080p 165Hz Monitor",
-    summary: "A straightforward first high-refresh display for competitive gaming on a tighter budget.",
-    price: 179,
-    priceLabel: "$140–$220",
-    bestFor: "Budget esports",
-    fit: "Desk-friendly size",
-    pros: ["Noticeably smoother than 60Hz", "Low entry price", "Easy GPU pairing"],
-    url: "https://example.com/replace-with-affiliate-link-8"
-  },
-  {
-    id: 9,
-    category: "ram",
-    label: "Creator capacity",
-    visual: "64GB",
-    name: "64GB Heavy-Multitasking Kit",
-    summary: "A higher-capacity memory tier for editing, virtual machines, large projects, and demanding multitasking.",
-    price: 169,
-    priceLabel: "$130–$220",
-    bestFor: "Creation workflows",
-    fit: "Check board limits",
-    pros: ["Large working capacity", "Useful for heavy workloads", "Cleaner than mixed kits"],
-    url: "https://example.com/replace-with-affiliate-link-9"
+    order: 7,
+    category: "case",
+    label: "Airflow-focused case",
+    visual: "ATX",
+    name: "Montech AIR 903 MAX Case",
+    summary: "A roomy ATX case chosen to make first-time assembly and cable routing less cramped while providing an airflow-focused layout for the selected components.",
+    bestFor: "First-time building and airflow",
+    fit: "ATX mid-tower",
+    pros: ["Supports the selected ATX board", "Roomy internal layout", "Designed around strong airflow"],
+    url: "https://amzn.to/4vV2HFb"
   }
 ];
+
+const categoryLabels = {
+  cpu: "Processor",
+  motherboard: "Motherboard",
+  ram: "Memory",
+  ssd: "Storage",
+  gpu: "Graphics card",
+  psu: "Power supply",
+  case: "Case"
+};
 
 const state = {
   category: "all",
   query: "",
-  sort: "featured",
-  maxBudget: Infinity
+  sort: "build-order"
 };
 
 const productGrid = document.getElementById("productGrid");
@@ -150,7 +124,7 @@ function productCard(product) {
         <div class="product-visual-inner">${product.visual}</div>
       </div>
       <div class="product-content">
-        <div class="product-type">${product.category}</div>
+        <div class="product-type">${categoryLabels[product.category]}</div>
         <h3>${product.name}</h3>
         <p class="product-summary">${product.summary}</p>
         <div class="product-meta">
@@ -159,8 +133,8 @@ function productCard(product) {
         </div>
         <ul class="product-pros">${product.pros.map(item => `<li>${item}</li>`).join("")}</ul>
         <div class="product-footer">
-          <div class="price-band"><span>Typical range</span><strong>${product.priceLabel}</strong></div>
-          <a class="product-link" href="${product.url}" target="_blank" rel="sponsored nofollow noopener">Check price</a>
+          <div class="price-band"><span>Retailer</span><strong>Check current price</strong></div>
+          <a class="product-link" href="${product.url}" target="_blank" rel="sponsored nofollow noopener">View on Amazon</a>
         </div>
       </div>
     </article>
@@ -168,22 +142,25 @@ function productCard(product) {
 }
 
 function getFilteredProducts() {
-  let filtered = products.filter(product => {
+  const filtered = products.filter(product => {
     const categoryMatch = state.category === "all" || product.category === state.category;
-    const searchMatch = `${product.name} ${product.summary} ${product.category} ${product.bestFor}`.toLowerCase().includes(state.query);
-    const budgetMatch = product.price <= state.maxBudget;
-    return categoryMatch && searchMatch && budgetMatch;
+    const searchable = `${product.name} ${product.summary} ${product.category} ${product.bestFor} ${product.fit}`.toLowerCase();
+    return categoryMatch && searchable.includes(state.query);
   });
 
-  if (state.sort === "price-low") filtered.sort((a, b) => a.price - b.price);
-  if (state.sort === "price-high") filtered.sort((a, b) => b.price - a.price);
+  if (state.sort === "component") {
+    filtered.sort((a, b) => categoryLabels[a.category].localeCompare(categoryLabels[b.category]));
+  } else {
+    filtered.sort((a, b) => a.order - b.order);
+  }
+
   return filtered;
 }
 
 function renderProducts() {
   const filtered = getFilteredProducts();
   productGrid.innerHTML = filtered.map(productCard).join("");
-  resultsCount.textContent = `${filtered.length} recommendation${filtered.length === 1 ? "" : "s"}`;
+  resultsCount.textContent = `${filtered.length} build component${filtered.length === 1 ? "" : "s"}`;
   emptyState.hidden = filtered.length !== 0;
 }
 
@@ -195,7 +172,6 @@ function setCategory(category) {
 
 categoryButtons.forEach(button => {
   button.addEventListener("click", () => {
-    state.maxBudget = Infinity;
     setCategory(button.dataset.category);
     document.getElementById("recommendations").scrollIntoView({ behavior: "smooth", block: "start" });
   });
@@ -214,29 +190,11 @@ sortProducts.addEventListener("change", event => {
 clearFilters.addEventListener("click", () => {
   state.category = "all";
   state.query = "";
-  state.sort = "featured";
-  state.maxBudget = Infinity;
+  state.sort = "build-order";
   productSearch.value = "";
-  sortProducts.value = "featured";
+  sortProducts.value = "build-order";
   categoryButtons.forEach(button => button.classList.toggle("active", button.dataset.category === "all"));
   renderProducts();
-});
-
-document.getElementById("upgradeForm").addEventListener("submit", event => {
-  event.preventDefault();
-  const category = document.getElementById("upgradeType").value;
-  const budget = Number(document.getElementById("budget").value);
-  state.category = category;
-  state.maxBudget = budget;
-  state.query = "";
-  productSearch.value = "";
-  categoryButtons.forEach(button => button.classList.toggle("active", button.dataset.category === category));
-  renderProducts();
-  const matches = getFilteredProducts().length;
-  document.getElementById("formResult").textContent = matches
-    ? `${matches} matching recommendation${matches === 1 ? "" : "s"} found below.`
-    : "No current pick matches that budget. Add a lower-cost option to the product list.";
-  document.getElementById("recommendations").scrollIntoView({ behavior: "smooth", block: "start" });
 });
 
 const menuButton = document.getElementById("menuButton");
@@ -245,6 +203,7 @@ menuButton.addEventListener("click", () => {
   const open = mainNav.classList.toggle("open");
   menuButton.setAttribute("aria-expanded", String(open));
 });
+
 mainNav.addEventListener("click", event => {
   if (event.target.matches("a")) {
     mainNav.classList.remove("open");
