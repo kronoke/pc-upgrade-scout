@@ -64,6 +64,30 @@ tabs.forEach(tab => tab.addEventListener("click", () => {
   renderGear();
 }));
 
+const learnContainer = document.querySelector(".learn-section .container");
+if (learnContainer && !document.querySelector(".featured-guide-panel")) {
+  const guidePanel = document.createElement("section");
+  guidePanel.className = "featured-guide-panel";
+  guidePanel.setAttribute("aria-labelledby", "featured-guide-title");
+  guidePanel.innerHTML = `
+    <div class="featured-guide-copy">
+      <div class="eyebrow">Featured guide</div>
+      <h3 id="featured-guide-title">How to Choose a Gaming Keyboard</h3>
+      <p>Learn the difference between mechanical and magnetic switches, Rapid Trigger, adjustable actuation, and 60%, TKL, and full-size layouts before choosing a keyboard.</p>
+    </div>
+    <a class="featured-guide-link" href="how-to-choose-gaming-keyboard.html">Read the keyboard guide <span aria-hidden="true">→</span></a>`;
+  learnContainer.appendChild(guidePanel);
+
+  const guideStyles = document.createElement("style");
+  guideStyles.textContent = `
+    .featured-guide-panel{margin-top:28px;padding:24px 26px;border:1px solid rgba(241,224,198,.18);border-radius:22px;background:linear-gradient(135deg,rgba(91,79,134,.2),rgba(215,130,162,.12));display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .featured-guide-copy{max-width:720px}.featured-guide-copy h3{margin:7px 0 8px;font-size:clamp(1.25rem,2.2vw,1.7rem)}.featured-guide-copy p{margin:0;line-height:1.7;opacity:.86}
+    .featured-guide-link{flex:0 0 auto;display:inline-flex;align-items:center;gap:8px;padding:12px 16px;border-radius:999px;background:#f4e6ca;color:#17152a;font-weight:800;text-decoration:none}.featured-guide-link:hover{transform:translateY(-1px)}
+    @media(max-width:760px){.featured-guide-panel{align-items:flex-start;flex-direction:column;padding:22px}.featured-guide-link{width:100%;justify-content:center}}
+  `;
+  document.head.appendChild(guideStyles);
+}
+
 const menuButton = document.getElementById("menuButton");
 const mainNav = document.getElementById("mainNav");
 menuButton.addEventListener("click", () => {
