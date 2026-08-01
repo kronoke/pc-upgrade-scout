@@ -4,101 +4,23 @@ const gear = [
   {category:"mouse",name:"Logitech G Pro X Superlight 2",label:"Safe-shape pick",usage:"54 of 677 pros · 7.98%",bestFor:"Players unsure which mouse shape to buy",reason:"The neutral shape works across many hand sizes and grip styles, while USB-C and modern switches update the original formula.",downside:"Clicks feel heavier than some rivals and the shape is intentionally less specialized.",specs:["≈60g","Wireless","USB-C"],url:"https://amzn.to/4wx9sxN"},
   {category:"mouse",name:"Logitech G Pro X Superlight",label:"Proven older value",usage:"50 of 677 pros · 7.39%",bestFor:"Buyers who find the original at a meaningful discount",reason:"Its low weight, dependable wireless connection and broadly comfortable shape made it an esports standard.",downside:"Uses Micro-USB and lacks the newer model’s updated switches and higher polling options.",specs:["≈63g","1KHz","Micro-USB"],url:"https://amzn.to/4wEdEw4"},
   {category:"mouse",name:"Razer DeathAdder V3 Pro",label:"Ergonomic option",usage:"27 of 677 pros · 3.99%",bestFor:"Right-handed players who prefer a taller ergonomic shape",reason:"It offers competitive wireless performance without forcing everyone into a symmetrical shell.",downside:"The larger right-handed shape is less universal, especially for smaller hands.",specs:["63g","Ergonomic","30K sensor"],url:"https://amzn.to/4wHRCZ9"},
-
   {category:"keyboard",name:"Razer Huntsman V3 Pro TKL",label:"Competitive TKL pick",usage:"Analog optical · Rapid Trigger",bestFor:"FPS players who want arrow keys and function keys without a number pad",reason:"The tenkeyless layout leaves more mouse room while adjustable actuation and Rapid Trigger let players tune how quickly movement keys respond and reset.",downside:"Expensive, wired, and the analog switches can feel sensitive until configured.",specs:["TKL layout","0.1–4.0mm actuation","Rapid Trigger"],url:"https://amzn.to/4yNBpDn"},
   {category:"keyboard",name:"Logitech G Pro X TKL RAPID",label:"Simple magnetic TKL",usage:"Magnetic analog · Rapid Trigger",bestFor:"Players who want a familiar TKL design with straightforward on-board tuning",reason:"Magnetic analog switches provide adjustable actuation and Rapid Trigger in a clean competitive layout.",downside:"It is wired and offers fewer enthusiast customization options than some modular keyboards.",specs:["TKL layout","Magnetic analog","On-board controls"],url:"https://amzn.to/4q1fZ1p"},
   {category:"keyboard",name:"Razer Huntsman V3 Pro Mini",label:"Maximum mouse space",usage:"60% layout · Rapid Trigger",bestFor:"Low-sensitivity players who want the smallest practical competitive keyboard",reason:"The compact 60% layout frees substantial desk space while retaining adjustable analog optical switches and Rapid Trigger.",downside:"No dedicated arrow row, function row, or navigation cluster; secondary layers take time to learn.",specs:["60% layout","Analog optical","Rapid Trigger"],url:"https://amzn.to/3RtWMsx"},
   {category:"keyboard",name:"SteelSeries Apex Pro TKL Gen 3",label:"Feature-rich TKL",usage:"OmniPoint 3.0 · Rapid Trigger",bestFor:"Players who want extensive switch tuning and dedicated keyboard controls",reason:"Its Hall Effect switches support adjustable actuation, Rapid Trigger, Rapid Tap, and Protection Mode, while the TKL layout preserves mouse space.",downside:"Premium price, software can feel busy, and many features are unnecessary for casual players.",specs:["TKL layout","0.1–4.0mm actuation","OLED controls"],url:"https://amzn.to/4wA20SR"},
   {category:"keyboard",name:"SteelSeries Apex Pro Mini Wireless",label:"Wireless compact pick",usage:"60% · Wireless magnetic",bestFor:"Players who want a small competitive keyboard without a permanent cable",reason:"It combines a compact layout, adjustable magnetic switches, and wireless flexibility for cleaner small-desk setups.",downside:"Layer-based controls are less convenient, wireless adds cost, and battery charging is another consideration.",specs:["60% layout","Wireless","Adjustable actuation"],url:"https://amzn.to/4xcDzdT"},
   {category:"keyboard",name:"Corsair K70 MAX RGB",label:"Full-size magnetic pick",usage:"MGX switches · Adjustable actuation",bestFor:"Players who want magnetic-switch features without giving up the number pad and media controls",reason:"Adjustable magnetic-mechanical switches provide per-key actuation tuning in a full-size board suited to gaming and everyday work.",downside:"The full-size footprint takes the most desk space and may interfere with wide, low-sensitivity mouse movement.",specs:["Full-size","MGX magnetic","Padded wrist rest"],url:"https://amzn.to/45376L5"},
-
   {category:"headset",name:"Razer BlackShark V3 Pro",label:"Most used headset",usage:"155 of 677 pros · 22.90%",bestFor:"Premium wireless FPS audio with ANC",reason:"Clear positional sound, a strong microphone, wireless flexibility and active noise cancellation make it a current competitive favorite.",downside:"It is expensive and heavier than the previous generation.",specs:["Wireless","ANC","Detachable mic"],url:"https://amzn.to/4yQkbFa"},
   {category:"headset",name:"Razer BlackShark V2 Pro",label:"Competitive wireless value",usage:"134 of 677 pros · 19.79%",bestFor:"Players prioritizing microphone quality and long wireless range",reason:"The 2023 model combines a strong boom mic, long battery life and useful passive isolation in a relatively light design.",downside:"Ear cushions can run warm and software setup may require some tuning.",specs:["Wireless","≈320g","Detachable mic"],url:"https://amzn.to/4xaAISP"},
   {category:"headset",name:"HyperX Cloud II",label:"Long-running wired standard",usage:"80 of 677 pros · 11.82%",bestFor:"A durable, simple wired headset",reason:"Its sturdy frame, familiar comfort and plug-and-play design have kept it in competitive setups for years.",downside:"The microphone and overall sound are basic compared with newer premium models.",specs:["Wired","≈320g","Closed-back"],url:"https://amzn.to/4g5syVW"},
   {category:"headset",name:"Logitech G Pro X 2 LIGHTSPEED",label:"Multi-connection premium pick",usage:"24 of 677 pros · 3.55%",bestFor:"Players who want wireless gaming plus Bluetooth and 3.5mm options",reason:"It combines a proven competitive design with graphene drivers and flexible connectivity.",downside:"The price is high and the microphone is not the strongest reason to choose it.",specs:["LIGHTSPEED","Bluetooth","Graphene drivers"],url:"https://amzn.to/4yN7g6S"},
   {category:"headset",name:"HyperX Cloud III Wireless",label:"Wireless alternative",usage:"Not tracked as the exact wireless model",bestFor:"Players who want a straightforward long-battery wireless headset",reason:"It keeps the familiar Cloud design while removing the cable and emphasizing simple everyday usability.",downside:"Do not treat the wired Cloud III pro-usage data as proof that pros use this exact wireless version.",specs:["2.4GHz wireless","Long battery","Detachable mic"],url:"https://amzn.to/4pPn0SL"}
 ];
-
-const toolbar = document.querySelector(".gear-toolbar");
-if (toolbar && !toolbar.querySelector('[data-gear="keyboard"]')) {
-  const keyboardTab = document.createElement("button");
-  keyboardTab.className = "gear-tab";
-  keyboardTab.dataset.gear = "keyboard";
-  keyboardTab.type = "button";
-  keyboardTab.setAttribute("role", "tab");
-  keyboardTab.textContent = "Gaming keyboards";
-  toolbar.insertBefore(keyboardTab, document.getElementById("gearCount"));
-}
-
-let activeGear = "mouse";
-const gearGrid = document.getElementById("gearGrid");
-const gearCount = document.getElementById("gearCount");
-const tabs = [...document.querySelectorAll(".gear-tab")];
-const categoryNames = {mouse:"FPS mouse",keyboard:"Gaming keyboard",headset:"Gaming headset"};
-const countNames = {mouse:"mice",keyboard:"keyboards",headset:"headsets"};
-
-function gearCard(item) {
-  return `<article class="gear-card">
-    <div class="gear-top"><span class="gear-type">${categoryNames[item.category]}</span><span class="gear-label">${item.label}</span></div>
-    <h3>${item.name}</h3>
-    <div class="usage-pill">${item.usage}</div>
-    <dl>
-      <div><dt>Best for</dt><dd>${item.bestFor}</dd></div>
-      <div><dt>Why players choose it</dt><dd>${item.reason}</dd></div>
-      <div class="downside"><dt>Know before buying</dt><dd>${item.downside}</dd></div>
-    </dl>
-    <div class="spec-chips">${item.specs.map(spec => `<span>${spec}</span>`).join("")}</div>
-    <a class="gear-link" href="${item.url}" target="_blank" rel="sponsored nofollow noopener" aria-label="Check current Amazon price for ${item.name}">Check current price on Amazon</a>
-  </article>`;
-}
-
-function renderGear() {
-  const shown = gear.filter(item => item.category === activeGear);
-  gearGrid.innerHTML = shown.map(gearCard).join("");
-  gearCount.textContent = `${shown.length} ${countNames[activeGear]}`;
-}
-
-tabs.forEach(tab => tab.addEventListener("click", () => {
-  activeGear = tab.dataset.gear;
-  tabs.forEach(item => item.classList.toggle("active", item === tab));
-  renderGear();
-}));
-
-const learnContainer = document.querySelector(".learn-section .container");
-if (learnContainer && !document.querySelector(".featured-guide-panel")) {
-  const guidePanel = document.createElement("section");
-  guidePanel.className = "featured-guide-panel";
-  guidePanel.setAttribute("aria-labelledby", "featured-guide-title");
-  guidePanel.innerHTML = `
-    <div class="featured-guide-copy">
-      <div class="eyebrow">Featured guide</div>
-      <h3 id="featured-guide-title">How to Choose a Gaming Keyboard</h3>
-      <p>Learn the difference between mechanical and magnetic switches, Rapid Trigger, adjustable actuation, and 60%, TKL, and full-size layouts before choosing a keyboard.</p>
-    </div>
-    <a class="featured-guide-link" href="how-to-choose-gaming-keyboard.html">Read the keyboard guide <span aria-hidden="true">→</span></a>`;
-  learnContainer.appendChild(guidePanel);
-
-  const guideStyles = document.createElement("style");
-  guideStyles.textContent = `
-    .featured-guide-panel{margin-top:28px;padding:24px 26px;border:1px solid rgba(241,224,198,.18);border-radius:22px;background:linear-gradient(135deg,rgba(91,79,134,.2),rgba(215,130,162,.12));display:flex;align-items:center;justify-content:space-between;gap:24px}
-    .featured-guide-copy{max-width:720px}.featured-guide-copy h3{margin:7px 0 8px;font-size:clamp(1.25rem,2.2vw,1.7rem)}.featured-guide-copy p{margin:0;line-height:1.7;opacity:.86}
-    .featured-guide-link{flex:0 0 auto;display:inline-flex;align-items:center;gap:8px;padding:12px 16px;border-radius:999px;background:#f4e6ca;color:#17152a;font-weight:800;text-decoration:none}.featured-guide-link:hover{transform:translateY(-1px)}
-    @media(max-width:760px){.featured-guide-panel{align-items:flex-start;flex-direction:column;padding:22px}.featured-guide-link{width:100%;justify-content:center}}
-  `;
-  document.head.appendChild(guideStyles);
-}
-
-const menuButton = document.getElementById("menuButton");
-const mainNav = document.getElementById("mainNav");
-menuButton.addEventListener("click", () => {
-  const open = mainNav.classList.toggle("open");
-  menuButton.setAttribute("aria-expanded", String(open));
-});
-mainNav.addEventListener("click", event => {
-  if (event.target.matches("a")) {
-    mainNav.classList.remove("open");
-    menuButton.setAttribute("aria-expanded", "false");
-  }
-});
-document.getElementById("currentYear").textContent = new Date().getFullYear();
-renderGear();
+const toolbar=document.querySelector('.gear-toolbar');if(toolbar&&!toolbar.querySelector('[data-gear="keyboard"]')){const keyboardTab=document.createElement('button');keyboardTab.className='gear-tab';keyboardTab.dataset.gear='keyboard';keyboardTab.type='button';keyboardTab.setAttribute('role','tab');keyboardTab.textContent='Gaming keyboards';toolbar.insertBefore(keyboardTab,document.getElementById('gearCount'))}
+let activeGear='mouse';const gearGrid=document.getElementById('gearGrid'),gearCount=document.getElementById('gearCount'),tabs=[...document.querySelectorAll('.gear-tab')];const categoryNames={mouse:'FPS mouse',keyboard:'Gaming keyboard',headset:'Gaming headset'},countNames={mouse:'mice',keyboard:'keyboards',headset:'headsets'};
+function gearCard(item){return `<article class="gear-card"><div class="gear-top"><span class="gear-type">${categoryNames[item.category]}</span><span class="gear-label">${item.label}</span></div><h3>${item.name}</h3><div class="usage-pill">${item.usage}</div><dl><div><dt>Best for</dt><dd>${item.bestFor}</dd></div><div><dt>Why players choose it</dt><dd>${item.reason}</dd></div><div class="downside"><dt>Know before buying</dt><dd>${item.downside}</dd></div></dl><div class="spec-chips">${item.specs.map(spec=>`<span>${spec}</span>`).join('')}</div><a class="gear-link" href="${item.url}" target="_blank" rel="sponsored nofollow noopener" aria-label="Check current Amazon price for ${item.name}">Check current price on Amazon</a></article>`}
+function renderGear(){const shown=gear.filter(item=>item.category===activeGear);gearGrid.innerHTML=shown.map(gearCard).join('');gearCount.textContent=`${shown.length} ${countNames[activeGear]}`}
+tabs.forEach(tab=>tab.addEventListener('click',()=>{activeGear=tab.dataset.gear;tabs.forEach(item=>item.classList.toggle('active',item===tab));renderGear()}));
+const learnNav=[...document.querySelectorAll('.main-nav a')].find(link=>link.textContent.trim()==='Learn');if(learnNav){learnNav.href='guides.html';learnNav.textContent='Guides'}
+const learnContainer=document.querySelector('.learn-section .container');if(learnContainer&&!document.querySelector('.featured-guide-panel')){const guidePanel=document.createElement('section');guidePanel.className='featured-guide-panel';guidePanel.setAttribute('aria-labelledby','featured-guide-title');guidePanel.innerHTML=`<div class="featured-guide-copy"><div class="eyebrow">Guide library</div><h3 id="featured-guide-title">Research your gear before you buy</h3><p>Browse the gaming mouse and keyboard guides now. Every future educational guide will be added to the same library.</p><div class="mini-guide-links"><a href="how-to-choose-gaming-mouse.html">Mouse guide</a><a href="how-to-choose-gaming-keyboard.html">Keyboard guide</a></div></div><a class="featured-guide-link" href="guides.html">View all guides <span aria-hidden="true">→</span></a>`;learnContainer.appendChild(guidePanel);const guideStyles=document.createElement('style');guideStyles.textContent=`.featured-guide-panel{margin-top:28px;padding:24px 26px;border:1px solid rgba(241,224,198,.18);border-radius:22px;background:linear-gradient(135deg,rgba(91,79,134,.2),rgba(215,130,162,.12));display:flex;align-items:center;justify-content:space-between;gap:24px}.featured-guide-copy{max-width:720px}.featured-guide-copy h3{margin:7px 0 8px;font-size:clamp(1.25rem,2.2vw,1.7rem)}.featured-guide-copy p{margin:0;line-height:1.7;opacity:.9}.mini-guide-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}.mini-guide-links a{color:#f2d19a;font-weight:800;text-decoration:none}.featured-guide-link{flex:0 0 auto;display:inline-flex;align-items:center;gap:8px;padding:12px 16px;border-radius:999px;background:#f4e6ca;color:#17152a;font-weight:800;text-decoration:none}.featured-guide-link:hover{transform:translateY(-1px)}@media(max-width:760px){.featured-guide-panel{align-items:flex-start;flex-direction:column;padding:22px}.featured-guide-link{width:100%;justify-content:center}}`;document.head.appendChild(guideStyles)}
+const menuButton=document.getElementById('menuButton'),mainNav=document.getElementById('mainNav');menuButton.addEventListener('click',()=>{const open=mainNav.classList.toggle('open');menuButton.setAttribute('aria-expanded',String(open))});mainNav.addEventListener('click',event=>{if(event.target.matches('a')){mainNav.classList.remove('open');menuButton.setAttribute('aria-expanded','false')}});document.getElementById('currentYear').textContent=new Date().getFullYear();renderGear();
