@@ -1,0 +1,18 @@
+(function(){
+ const links=window.PC_AFFILIATE_LINKS||{};
+ const gear=document.querySelector('.gear-section');
+ if(!gear)return;
+ const section=document.createElement('section');
+ section.className='market-2026-section';
+ const hot=[
+  ['AMD Ryzen 7 9800X3D','Top-selling gaming CPU','One of Amazon’s strongest-selling gaming processors and a leading choice for high-FPS builds.'],
+  ['AMD Ryzen 7 7800X3D','Popular value X3D CPU','Still widely bought because it delivers excellent gaming performance on AM5.'],
+  ['NVIDIA GeForce RTX 5070','Popular current-generation GPU','A frequently purchased 1440p card with current-generation features.'],
+  ['NVIDIA GeForce RTX 5070 Ti','High-end 1440p / entry 4K','A strong step up for higher settings, ray tracing and longer upgrade cycles.'],
+  ['AMD Radeon RX 9070 XT','Popular 16GB alternative','A strong raster-performance option for high-refresh 1440p and 4K gaming.'],
+  ['AMD Radeon RX 9060 XT 16GB','Value-focused 16GB GPU','A current midrange option for buyers prioritizing VRAM and price.']
+ ];
+ const buy=(name,label='Check current price')=>links[name]?`<a href="${links[name]}" target="_blank" rel="sponsored nofollow noopener">${label}</a>`:'<span class="no-link">Amazon listing not added</span>';
+ section.innerHTML=`<div class="container"><div class="section-heading"><div><div class="eyebrow">2026 buying trends</div><h2>Hot-selling PC parts right now</h2></div><p>These are current high-interest retail parts, not permanent rankings. Availability and pricing can change quickly.</p></div><div class="hot-grid">${hot.map(([name,badge,text])=>`<article class="hot-card"><span>${badge}</span><h3>${name}</h3><p>${text}</p>${buy(name)}</article>`).join('')}</div><div class="optimal-build-card"><div class="optimal-copy"><div class="eyebrow">PC Upgrade Scout pick</div><h2>Optimal 2026 gaming PC core</h2><p>Designed for excellent high-refresh 1440p performance with enough graphics power for 4K. This prioritizes gaming performance, a modern AM5 upgrade path and sensible power headroom.</p><div class="optimal-parts"><div><small>CPU</small><strong>AMD Ryzen 7 9800X3D</strong>${buy('AMD Ryzen 7 9800X3D','View CPU')}</div><div><small>GPU</small><strong>AMD Radeon RX 9070 XT 16GB</strong>${buy('AMD Radeon RX 9070 XT','View GPU')}</div><div><small>Motherboard</small><strong>MSI B850 Gaming Plus WiFi</strong>${buy('MSI B850 Gaming Plus WiFi','View motherboard')}</div><div><small>Memory</small><strong>32GB DDR5-6000 CL30</strong><span>Recommended specification</span></div><div><small>Storage</small><strong>2TB PCIe 4.0 NVMe SSD</strong><span>Recommended specification</span></div><div><small>Power</small><strong>850W 80+ Gold ATX 3.1 PSU</strong><span>Recommended specification</span></div><div><small>Cooling</small><strong>Strong dual-tower air cooler or 240mm AIO</strong><span>Recommended specification</span></div><div><small>Case</small><strong>High-airflow ATX case with 340mm+ GPU clearance</strong><span>Recommended specification</span></div></div><p class="optimal-note">The CPU, GPU and motherboard use your submitted affiliate links. The remaining items are specification targets until exact affiliate products are selected.</p></div><div class="optimal-score"><b>9.4</b><span>/ 10 estimated balance</span><ul><li>Excellent gaming CPU</li><li>16GB graphics memory</li><li>Modern AM5 platform</li><li>850W upgrade headroom</li></ul><a class="button primary" href="pc-compatibility-calculator.html">Customize this build</a></div></div></div>`;
+ gear.parentNode.insertBefore(section,gear);
+})();
