@@ -20,3 +20,13 @@ productSearch.addEventListener("input",event=>{state.query=event.target.value.tr
 sortProducts.addEventListener("change",event=>{state.sort=event.target.value;renderProducts()});
 clearFilters.addEventListener("click",()=>{state.category="all";state.query="";state.sort="build-order";productSearch.value="";sortProducts.value="build-order";categoryButtons.forEach(button=>button.classList.toggle("active",button.dataset.category==="all"));renderProducts()});
 const menuButton=document.getElementById("menuButton"),mainNav=document.getElementById("mainNav");menuButton.addEventListener("click",()=>{const open=mainNav.classList.toggle("open");menuButton.setAttribute("aria-expanded",String(open))});mainNav.addEventListener("click",event=>{if(event.target.matches("a")){mainNav.classList.remove("open");menuButton.setAttribute("aria-expanded","false")}});document.getElementById("currentYear").textContent=new Date().getFullYear();renderProducts();
+
+const pairingSection=document.getElementById('pairings');
+if(pairingSection&&!pairingSection.querySelector('.bios-build-note')){
+  const container=pairingSection.querySelector('.container');
+  const note=document.createElement('div');
+  note.className='bios-build-note';
+  note.innerHTML='<strong>Socket compatibility is not the whole story.</strong><p>A motherboard may require a newer BIOS before it can boot with a supported CPU generation. Always verify the exact board model, revision, CPU-support list and required BIOS version.</p><a href="cpu-motherboard-bios-compatibility-guide.html">Read the CPU and BIOS compatibility guide →</a>';
+  container.appendChild(note);
+  const style=document.createElement('style');style.textContent='.bios-build-note{margin-top:28px;padding:22px;border:1px solid rgba(241,224,198,.2);border-radius:18px;background:rgba(255,255,255,.045)}.bios-build-note p{line-height:1.7}.bios-build-note a{color:#f2d19a;font-weight:800}';document.head.appendChild(style);
+}
