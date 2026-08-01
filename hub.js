@@ -1,16 +1,80 @@
-const gear=[
-{category:"mouse",image:"razer-viper-v4-pro",imageAlt:"Razer Viper V4 Pro wireless gaming mouse",name:"Razer Viper V4 Pro",label:"Most used in dataset",usage:"113 of 677 pros · 16.69%",bestFor:"Players wanting an extremely light symmetrical FPS mouse",reason:"Low weight, top-tier wireless performance and an 8KHz polling option make it a current competitive flagship.",downside:"Premium price and noticeably loud clicks.",specs:["49g","Up to 8KHz","50K sensor"],url:"https://amzn.to/3RN4JZI"},
-{category:"mouse",image:"razer-viper-v3-pro",imageAlt:"Razer Viper V3 Pro wireless gaming mouse",name:"Razer Viper V3 Pro",label:"Established pro favorite",usage:"101 of 677 pros · 14.92%",bestFor:"Claw or relaxed-claw users who want a safe symmetrical shape",reason:"It remains widely used because it is light, responsive and shaped to work for many competitive players.",downside:"The V4 is lighter and newer; side buttons can feel softer than the main clicks.",specs:["54g","Up to 8KHz","35K sensor"],url:"https://amzn.to/4vXenHq"},
-{category:"mouse",image:"logitech-g-pro-x-superlight-2",imageAlt:"Logitech G Pro X Superlight 2 wireless gaming mouse",name:"Logitech G Pro X Superlight 2",label:"Safe-shape pick",usage:"54 of 677 pros · 7.98%",bestFor:"Players unsure which shape to buy",reason:"The neutral shape works across many hand sizes and grip styles, while USB-C and modern switches update the original formula.",downside:"Clicks feel heavier than some rivals and the shape is intentionally less specialized.",specs:["≈60g","Wireless","USB-C"],url:"https://amzn.to/4wx9sxN"},
-{category:"mouse",image:"logitech-g-pro-x-superlight",imageAlt:"Logitech G Pro X Superlight wireless gaming mouse",name:"Logitech G Pro X Superlight",label:"Proven older value",usage:"50 of 677 pros · 7.39%",bestFor:"Buyers who find the original at a meaningful discount",reason:"Its low weight, dependable wireless connection and broadly comfortable shape made it an esports standard.",downside:"Uses Micro-USB and lacks the newer model’s updated switches and higher polling options.",specs:["≈63g","1KHz","Micro-USB"],url:"https://amzn.to/4wEdEw4"},
-{category:"mouse",image:"razer-deathadder-v3-pro",imageAlt:"Razer DeathAdder V3 Pro ergonomic wireless gaming mouse",name:"Razer DeathAdder V3 Pro",label:"Ergonomic option",usage:"27 of 677 pros · 3.99%",bestFor:"Right-handed players who prefer a taller ergonomic shape",reason:"It offers competitive wireless performance without forcing everyone into a symmetrical shell.",downside:"The larger right-handed shape is less universal, especially for smaller hands.",specs:["63g","Ergonomic","30K sensor"],url:"https://amzn.to/4wHRCZ9"},
-{category:"headset",image:"razer-blackshark-v3-pro",imageAlt:"Razer BlackShark V3 Pro wireless gaming headset",name:"Razer BlackShark V3 Pro",label:"Most used headset",usage:"155 of 677 pros · 22.90%",bestFor:"Premium wireless FPS audio with ANC",reason:"Clear positional sound, a strong microphone, wireless flexibility and active noise cancellation make it a current competitive favorite.",downside:"It is expensive and heavier than the previous generation.",specs:["Wireless","ANC","Detachable mic"],url:"https://amzn.to/4yQkbFa"},
-{category:"headset",image:"razer-blackshark-v2-pro",imageAlt:"Razer BlackShark V2 Pro wireless gaming headset",name:"Razer BlackShark V2 Pro",label:"Competitive wireless value",usage:"134 of 677 pros · 19.79%",bestFor:"Players prioritizing microphone quality and long wireless range",reason:"The 2023 model combines a strong boom mic, long battery life and useful passive isolation in a relatively light design.",downside:"Ear cushions can run warm and software setup may require some tuning.",specs:["Wireless","≈320g","Detachable mic"],url:"https://amzn.to/4xaAISP"},
-{category:"headset",image:"hyperx-cloud-ii",imageAlt:"HyperX Cloud II wired gaming headset in red and black",name:"HyperX Cloud II",label:"Long-running wired standard",usage:"80 of 677 pros · 11.82%",bestFor:"A durable, simple wired headset",reason:"Its sturdy frame, familiar comfort and plug-and-play design have kept it in competitive setups for years.",downside:"The microphone and overall sound are basic compared with newer premium models.",specs:["Wired","≈320g","Closed-back"],url:"https://amzn.to/4g5syVW"},
-{category:"headset",image:"logitech-g-pro-x-2-lightspeed",imageAlt:"Logitech G Pro X 2 LIGHTSPEED wireless gaming headset in white",name:"Logitech G Pro X 2 LIGHTSPEED",label:"Multi-connection premium pick",usage:"24 of 677 pros · 3.55%",bestFor:"Players who want wireless gaming plus Bluetooth and 3.5mm options",reason:"It combines a proven competitive design with graphene drivers and flexible connectivity.",downside:"The price is high and the microphone is not the strongest reason to choose it.",specs:["LIGHTSPEED","Bluetooth","Graphene drivers"],url:"https://amzn.to/4yN7g6S"},
-{category:"headset",image:"hyperx-cloud-iii-wireless",imageAlt:"HyperX Cloud III Wireless gaming headset in red and black",name:"HyperX Cloud III Wireless",label:"Wireless alternative",usage:"Not tracked as the exact wireless model",bestFor:"Players who want a straightforward long-battery wireless headset",reason:"It keeps the familiar Cloud design while removing the cable and emphasizing simple everyday usability.",downside:"Do not treat the wired Cloud III pro-usage data as proof that pros use this exact wireless version.",specs:["2.4GHz wireless","Long battery","Detachable mic"],url:"https://amzn.to/4pPn0SL"}
+const gear = [
+  {category:"mouse",name:"Razer Viper V4 Pro",label:"Most used in dataset",usage:"113 of 677 pros · 16.69%",bestFor:"Players wanting an extremely light symmetrical FPS mouse",reason:"Low weight, top-tier wireless performance and an 8KHz polling option make it a current competitive flagship.",downside:"Premium price and noticeably loud clicks.",specs:["49g","Up to 8KHz","50K sensor"],url:"https://amzn.to/3RN4JZI"},
+  {category:"mouse",name:"Razer Viper V3 Pro",label:"Established pro favorite",usage:"101 of 677 pros · 14.92%",bestFor:"Claw or relaxed-claw users who want a safe symmetrical shape",reason:"It remains widely used because it is light, responsive and shaped to work for many competitive players.",downside:"The V4 is lighter and newer; side buttons can feel softer than the main clicks.",specs:["54g","Up to 8KHz","35K sensor"],url:"https://amzn.to/4vXenHq"},
+  {category:"mouse",name:"Logitech G Pro X Superlight 2",label:"Safe-shape pick",usage:"54 of 677 pros · 7.98%",bestFor:"Players unsure which mouse shape to buy",reason:"The neutral shape works across many hand sizes and grip styles, while USB-C and modern switches update the original formula.",downside:"Clicks feel heavier than some rivals and the shape is intentionally less specialized.",specs:["≈60g","Wireless","USB-C"],url:"https://amzn.to/4wx9sxN"},
+  {category:"mouse",name:"Logitech G Pro X Superlight",label:"Proven older value",usage:"50 of 677 pros · 7.39%",bestFor:"Buyers who find the original at a meaningful discount",reason:"Its low weight, dependable wireless connection and broadly comfortable shape made it an esports standard.",downside:"Uses Micro-USB and lacks the newer model’s updated switches and higher polling options.",specs:["≈63g","1KHz","Micro-USB"],url:"https://amzn.to/4wEdEw4"},
+  {category:"mouse",name:"Razer DeathAdder V3 Pro",label:"Ergonomic option",usage:"27 of 677 pros · 3.99%",bestFor:"Right-handed players who prefer a taller ergonomic shape",reason:"It offers competitive wireless performance without forcing everyone into a symmetrical shell.",downside:"The larger right-handed shape is less universal, especially for smaller hands.",specs:["63g","Ergonomic","30K sensor"],url:"https://amzn.to/4wHRCZ9"},
+
+  {category:"keyboard",name:"Razer Huntsman V3 Pro TKL",label:"Competitive TKL pick",usage:"Analog optical · Rapid Trigger",bestFor:"FPS players who want arrow keys and function keys without a number pad",reason:"The tenkeyless layout leaves more mouse room while adjustable actuation and Rapid Trigger let players tune how quickly movement keys respond and reset.",downside:"Expensive, wired, and the analog switches can feel sensitive until configured.",specs:["TKL layout","0.1–4.0mm actuation","Rapid Trigger"],url:"https://amzn.to/4yNBpDn"},
+  {category:"keyboard",name:"Logitech G Pro X TKL RAPID",label:"Simple magnetic TKL",usage:"Magnetic analog · Rapid Trigger",bestFor:"Players who want a familiar TKL design with straightforward on-board tuning",reason:"Magnetic analog switches provide adjustable actuation and Rapid Trigger in a clean competitive layout.",downside:"It is wired and offers fewer enthusiast customization options than some modular keyboards.",specs:["TKL layout","Magnetic analog","On-board controls"],url:"https://amzn.to/4q1fZ1p"},
+  {category:"keyboard",name:"Razer Huntsman V3 Pro Mini",label:"Maximum mouse space",usage:"60% layout · Rapid Trigger",bestFor:"Low-sensitivity players who want the smallest practical competitive keyboard",reason:"The compact 60% layout frees substantial desk space while retaining adjustable analog optical switches and Rapid Trigger.",downside:"No dedicated arrow row, function row, or navigation cluster; secondary layers take time to learn.",specs:["60% layout","Analog optical","Rapid Trigger"],url:"https://amzn.to/3RtWMsx"},
+  {category:"keyboard",name:"SteelSeries Apex Pro TKL Gen 3",label:"Feature-rich TKL",usage:"OmniPoint 3.0 · Rapid Trigger",bestFor:"Players who want extensive switch tuning and dedicated keyboard controls",reason:"Its Hall Effect switches support adjustable actuation, Rapid Trigger, Rapid Tap, and Protection Mode, while the TKL layout preserves mouse space.",downside:"Premium price, software can feel busy, and many features are unnecessary for casual players.",specs:["TKL layout","0.1–4.0mm actuation","OLED controls"],url:"https://amzn.to/4wA20SR"},
+  {category:"keyboard",name:"SteelSeries Apex Pro Mini Wireless",label:"Wireless compact pick",usage:"60% · Wireless magnetic",bestFor:"Players who want a small competitive keyboard without a permanent cable",reason:"It combines a compact layout, adjustable magnetic switches, and wireless flexibility for cleaner small-desk setups.",downside:"Layer-based controls are less convenient, wireless adds cost, and battery charging is another consideration.",specs:["60% layout","Wireless","Adjustable actuation"],url:"https://amzn.to/4xcDzdT"},
+  {category:"keyboard",name:"Corsair K70 MAX RGB",label:"Full-size magnetic pick",usage:"MGX switches · Adjustable actuation",bestFor:"Players who want magnetic-switch features without giving up the number pad and media controls",reason:"Adjustable magnetic-mechanical switches provide per-key actuation tuning in a full-size board suited to gaming and everyday work.",downside:"The full-size footprint takes the most desk space and may interfere with wide, low-sensitivity mouse movement.",specs:["Full-size","MGX magnetic","Padded wrist rest"],url:"https://amzn.to/45376L5"},
+
+  {category:"headset",name:"Razer BlackShark V3 Pro",label:"Most used headset",usage:"155 of 677 pros · 22.90%",bestFor:"Premium wireless FPS audio with ANC",reason:"Clear positional sound, a strong microphone, wireless flexibility and active noise cancellation make it a current competitive favorite.",downside:"It is expensive and heavier than the previous generation.",specs:["Wireless","ANC","Detachable mic"],url:"https://amzn.to/4yQkbFa"},
+  {category:"headset",name:"Razer BlackShark V2 Pro",label:"Competitive wireless value",usage:"134 of 677 pros · 19.79%",bestFor:"Players prioritizing microphone quality and long wireless range",reason:"The 2023 model combines a strong boom mic, long battery life and useful passive isolation in a relatively light design.",downside:"Ear cushions can run warm and software setup may require some tuning.",specs:["Wireless","≈320g","Detachable mic"],url:"https://amzn.to/4xaAISP"},
+  {category:"headset",name:"HyperX Cloud II",label:"Long-running wired standard",usage:"80 of 677 pros · 11.82%",bestFor:"A durable, simple wired headset",reason:"Its sturdy frame, familiar comfort and plug-and-play design have kept it in competitive setups for years.",downside:"The microphone and overall sound are basic compared with newer premium models.",specs:["Wired","≈320g","Closed-back"],url:"https://amzn.to/4g5syVW"},
+  {category:"headset",name:"Logitech G Pro X 2 LIGHTSPEED",label:"Multi-connection premium pick",usage:"24 of 677 pros · 3.55%",bestFor:"Players who want wireless gaming plus Bluetooth and 3.5mm options",reason:"It combines a proven competitive design with graphene drivers and flexible connectivity.",downside:"The price is high and the microphone is not the strongest reason to choose it.",specs:["LIGHTSPEED","Bluetooth","Graphene drivers"],url:"https://amzn.to/4yN7g6S"},
+  {category:"headset",name:"HyperX Cloud III Wireless",label:"Wireless alternative",usage:"Not tracked as the exact wireless model",bestFor:"Players who want a straightforward long-battery wireless headset",reason:"It keeps the familiar Cloud design while removing the cable and emphasizing simple everyday usability.",downside:"Do not treat the wired Cloud III pro-usage data as proof that pros use this exact wireless version.",specs:["2.4GHz wireless","Long battery","Detachable mic"],url:"https://amzn.to/4pPn0SL"}
 ];
-let activeGear="mouse";const gearGrid=document.getElementById("gearGrid"),gearCount=document.getElementById("gearCount"),tabs=[...document.querySelectorAll(".gear-tab")];
-function gearCard(item){return `<article class="gear-card"><div class="gear-top"><span class="gear-type">${item.category==="mouse"?"FPS mouse":"Gaming headset"}</span><span class="gear-label">${item.label}</span></div><div class="gear-photo-wrap"><img class="gear-photo" src="assets/products/${item.image}.svg" alt="${item.imageAlt}" width="520" height="260" loading="lazy" decoding="async" /></div><h3>${item.name}</h3><div class="usage-pill">${item.usage}</div><dl><div><dt>Best for</dt><dd>${item.bestFor}</dd></div><div><dt>Why players choose it</dt><dd>${item.reason}</dd></div><div class="downside"><dt>Know before buying</dt><dd>${item.downside}</dd></div></dl><div class="spec-chips">${item.specs.map(s=>`<span>${s}</span>`).join("")}</div><a class="gear-link" href="${item.url}" target="_blank" rel="sponsored nofollow noopener" aria-label="Check current Amazon price for ${item.name}">Check current price on Amazon</a></article>`}
-function renderGear(){const shown=gear.filter(i=>i.category===activeGear);gearGrid.innerHTML=shown.map(gearCard).join("");gearCount.textContent=`${shown.length} ${activeGear==="mouse"?"mice":"headsets"}`}
-tabs.forEach(tab=>tab.addEventListener("click",()=>{activeGear=tab.dataset.gear;tabs.forEach(i=>i.classList.toggle("active",i===tab));renderGear()}));const menuButton=document.getElementById("menuButton"),mainNav=document.getElementById("mainNav");menuButton.addEventListener("click",()=>{const open=mainNav.classList.toggle("open");menuButton.setAttribute("aria-expanded",String(open))});mainNav.addEventListener("click",e=>{if(e.target.matches("a")){mainNav.classList.remove("open");menuButton.setAttribute("aria-expanded","false")}});document.getElementById("currentYear").textContent=new Date().getFullYear();renderGear();
+
+const toolbar = document.querySelector(".gear-toolbar");
+if (toolbar && !toolbar.querySelector('[data-gear="keyboard"]')) {
+  const keyboardTab = document.createElement("button");
+  keyboardTab.className = "gear-tab";
+  keyboardTab.dataset.gear = "keyboard";
+  keyboardTab.type = "button";
+  keyboardTab.setAttribute("role", "tab");
+  keyboardTab.textContent = "Gaming keyboards";
+  toolbar.insertBefore(keyboardTab, document.getElementById("gearCount"));
+}
+
+let activeGear = "mouse";
+const gearGrid = document.getElementById("gearGrid");
+const gearCount = document.getElementById("gearCount");
+const tabs = [...document.querySelectorAll(".gear-tab")];
+const categoryNames = {mouse:"FPS mouse",keyboard:"Gaming keyboard",headset:"Gaming headset"};
+const countNames = {mouse:"mice",keyboard:"keyboards",headset:"headsets"};
+
+function gearCard(item) {
+  return `<article class="gear-card">
+    <div class="gear-top"><span class="gear-type">${categoryNames[item.category]}</span><span class="gear-label">${item.label}</span></div>
+    <h3>${item.name}</h3>
+    <div class="usage-pill">${item.usage}</div>
+    <dl>
+      <div><dt>Best for</dt><dd>${item.bestFor}</dd></div>
+      <div><dt>Why players choose it</dt><dd>${item.reason}</dd></div>
+      <div class="downside"><dt>Know before buying</dt><dd>${item.downside}</dd></div>
+    </dl>
+    <div class="spec-chips">${item.specs.map(spec => `<span>${spec}</span>`).join("")}</div>
+    <a class="gear-link" href="${item.url}" target="_blank" rel="sponsored nofollow noopener" aria-label="Check current Amazon price for ${item.name}">Check current price on Amazon</a>
+  </article>`;
+}
+
+function renderGear() {
+  const shown = gear.filter(item => item.category === activeGear);
+  gearGrid.innerHTML = shown.map(gearCard).join("");
+  gearCount.textContent = `${shown.length} ${countNames[activeGear]}`;
+}
+
+tabs.forEach(tab => tab.addEventListener("click", () => {
+  activeGear = tab.dataset.gear;
+  tabs.forEach(item => item.classList.toggle("active", item === tab));
+  renderGear();
+}));
+
+const menuButton = document.getElementById("menuButton");
+const mainNav = document.getElementById("mainNav");
+menuButton.addEventListener("click", () => {
+  const open = mainNav.classList.toggle("open");
+  menuButton.setAttribute("aria-expanded", String(open));
+});
+mainNav.addEventListener("click", event => {
+  if (event.target.matches("a")) {
+    mainNav.classList.remove("open");
+    menuButton.setAttribute("aria-expanded", "false");
+  }
+});
+document.getElementById("currentYear").textContent = new Date().getFullYear();
+renderGear();
