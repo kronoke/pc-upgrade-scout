@@ -1,4 +1,11 @@
 (function(){
+  if(!document.querySelector('script[data-pc-scout-analytics]')){
+    const analytics=document.createElement('script');
+    analytics.src='analytics.js';
+    analytics.defer=true;
+    analytics.dataset.pcScoutAnalytics='true';
+    document.head.appendChild(analytics);
+  }
   if(document.getElementById('pcScoutHelp'))return;
   const style=document.createElement('style');
   style.textContent=`.help-launcher{position:fixed;right:20px;bottom:20px;z-index:9998;border:0;border-radius:999px;padding:13px 17px;background:#f2d19a;color:#17152a;font:inherit;font-weight:800;box-shadow:0 14px 38px rgba(0,0,0,.28);cursor:pointer}.help-launcher:hover{transform:translateY(-2px)}.help-backdrop{position:fixed;inset:0;z-index:9998;background:rgba(9,8,18,.66);backdrop-filter:blur(3px);display:none}.help-backdrop.open{display:block}.help-panel{position:fixed;right:20px;bottom:78px;z-index:9999;width:min(430px,calc(100vw - 24px));max-height:min(720px,calc(100vh - 105px));overflow:auto;border:1px solid rgba(241,224,198,.22);border-radius:24px;background:#211d38;color:#f8f4ed;box-shadow:0 24px 70px rgba(0,0,0,.45);display:none}.help-panel.open{display:block}.help-head{position:sticky;top:0;display:flex;justify-content:space-between;gap:18px;align-items:flex-start;padding:21px 22px 17px;background:#211d38;border-bottom:1px solid rgba(241,224,198,.12);z-index:2}.help-head h2{font-size:1.35rem;margin:3px 0}.help-head p{margin:0;color:#d8d0e1;font-size:.9rem}.help-close{border:0;background:transparent;color:#fff;font-size:1.5rem;cursor:pointer}.help-tabs{display:flex;gap:8px;padding:16px 20px 0}.help-tab{flex:1;border:1px solid rgba(241,224,198,.18);border-radius:999px;padding:10px;background:transparent;color:#e8e0ef;font:inherit;font-weight:800;cursor:pointer}.help-tab.active{background:#f2d19a;color:#17152a}.help-view{padding:18px 20px 22px}.help-faq details{border:1px solid rgba(241,224,198,.13);border-radius:15px;padding:13px 14px;margin-bottom:10px;background:rgba(255,255,255,.035)}.help-faq summary{font-weight:800;cursor:pointer}.help-faq p{color:#d8d0e1;line-height:1.6;margin:10px 0 2px}.help-faq a{color:#f2d19a;font-weight:800}.feedback-form{display:grid;gap:13px}.feedback-form label{display:grid;gap:6px;font-weight:700}.feedback-form input,.feedback-form select,.feedback-form textarea{width:100%;box-sizing:border-box;border:1px solid rgba(241,224,198,.18);border-radius:12px;background:#17152a;color:#fff;padding:11px 12px;font:inherit}.feedback-form textarea{min-height:120px;resize:vertical}.feedback-form button{border:0;border-radius:999px;padding:12px 16px;background:#f2d19a;color:#17152a;font:inherit;font-weight:900;cursor:pointer}.feedback-form button:disabled{opacity:.65;cursor:wait}.feedback-note,.feedback-status{font-size:.82rem;color:#bdb5ca;line-height:1.55;margin:0}.feedback-status.error{color:#ffb2b2}.honey-field{position:absolute!important;left:-9999px!important;opacity:0!important;pointer-events:none!important}@media(max-width:620px){.help-launcher{right:12px;bottom:12px}.help-panel{right:12px;bottom:68px}.help-backdrop{display:none!important}}`;
@@ -42,8 +49,10 @@
     try{
       const response=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{Accept:'application/json'}});
       if(!response.ok)throw new Error('Submission failed');
+      if(window.PCScoutTrack)window.PCScoutTrack('feedback_submit_success',{page_path:location.pathname,feedback_type:form.querySelector('#feedbackType').value});
       window.location.assign(new URL('feedback-thanks.html',window.location.href).href);
     }catch(error){
+      if(window.PCScoutTrack)window.PCScoutTrack('feedback_submit_error',{page_path:location.pathname});
       status.className='feedback-status error';
       status.textContent='The feedback could not be sent. Please try again in a moment.';
       submit.disabled=false;
