@@ -26,4 +26,5 @@
   function loadRecommendationCards(){if(document.querySelector('script[data-calculator-affiliate]'))return;const script=document.createElement('script');script.src='calculator-affiliate-recommendation.js';script.dataset.calculatorAffiliate='true';document.body.appendChild(script);}
   if(window.PC_AFFILIATE_LINKS){loadRecommendationCards()}else{const catalog=document.createElement('script');catalog.src='affiliate-products.js';catalog.onload=loadRecommendationCards;document.body.appendChild(catalog)}
   const help=document.createElement('script');help.src='help-feedback.js';help.defer=true;document.body.appendChild(help);
+  const trust=document.createElement('script');trust.src='calculator-trust.js';trust.defer=true;document.body.appendChild(trust);
 })();
